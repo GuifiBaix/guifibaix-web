@@ -1,4 +1,4 @@
 guifibaix-web
 =============
 
-Offial GuifiBaix website
+Official GuifiBaix website
