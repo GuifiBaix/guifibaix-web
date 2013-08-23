@@ -9,7 +9,10 @@
 	<meta name="author" content="vokimon">
 	<title>GuifiBaix Site</title>
 	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
-<link rel='stylesheet' href='media/css/fluid_grid.css' />
+	<!--[if lt IE 9]>
+	<script src="components/html5shiv/html5shiv.js"></script>
+	<![endif]-->
+	<link rel='stylesheet' href='media/css/fluid_grid.css' />
 <style>
 html
 {
@@ -23,15 +26,27 @@ body
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* Header */
 header
 {
 	display: -webkit-flex;
 	display:         flex;
 	-webkit-flex-direction: row;
 	        flex-direction: row;
+
+	-webkit-box-align: center;
+	-moz-box-align: center; /* OLD… */
+	-ms-flex-align: center; /* You know the drill now… */
+	-webkit-align-items: center;
+	align-items: center;
 }
+
 header > .logo
 {
+	width: 240px;
+	height: 129px;
+	-webkit-flex-shrink: 0;
 	flex-shrink: 0;
 }
 
@@ -43,19 +58,35 @@ header > .logo > img
 header > .lemma
 {
 	padding: 10px;
-	margin-left: 6ex;
 	font-size: 3ex;
 	vertical-align: bottom;
 	display: table-cell;
 	flex-grow: 1;
 }
 
-
-
+/* Navigation menu */
 nav
 {
 	padding: 0;
 	width: 100%;
+}
+nav > ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-left: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+nav > ul > li
+{
+	margin: 1ex;
+	text-align: center;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
 }
 nav a:link,
 nav a:active,
@@ -78,9 +109,11 @@ nav a:hover
 }
 nav a:hover
 {
-	color: #fef;
-	background: #aa4444;
-	text-shadow: 0 4px 4px rgba(0,0,0,.3);
+	background: #bb4433;
+	text-shadow: 0 4px 4px rgba(1,1,0,.7);
+	-webkit-box-shadow: 0 2px 4px rgba(1,1,0,.7);
+	   -moz-box-shadow: 0 2px 4px rgba(1,1,0,.7);
+	        box-shadow: 0 2px 4px rgba(1,1,0,.7);
 }
 nav a:active
 {
@@ -88,30 +121,14 @@ nav a:active
 	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
 	        box-shadow: 0 1px 2px rgba(0,0,0,.7);
 }
-nav > ul
-{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	padding-left: 0;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-}
 
-nav > ul > li
-{
-	margin: 1ex;
-	text-align: center;
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
 
-}
+/* Image slider */
+
 .slider
 {
 	width: 90%;
-	height: 40ex;
+	height: 50ex;
 	margin: 3ex;
 	margin-left: auto;
 	margin-right: auto;
@@ -147,11 +164,11 @@ nav > ul > li
 .slider > figure > figcaption
 {
 	position: absolute;
-	font-size: 120%;
+	font-size: 140%;
 	width: 40%;
 	bottom: 3ex;
 	right: 3ex;
-	padding: 2ex;
+	padding: 3ex;
 	background: #aaa;
 	background: rgba(1,0,1,0.6);
 	color: #ffd;
@@ -167,26 +184,6 @@ nav > ul > li
 	text-align: left;
 }
 
-/*
-.highlights
-{
-	display: -webkit-flex;
-	display:         flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-}
-.highlights > .point
-{
-	margin: 2ex;
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
-}
-*/
-
-.highlights > .point > h2
-{
-	font-variant: small-caps;
-}
 </style>
 </head>
 <body>
@@ -213,28 +210,28 @@ nav > ul > li
 <figure>
 <img src='media/images/slide1.jpg' />
 <figcaption>
-	Conectamos tu comunidad de vecinos a la red Guifi.net.
+	Conectamos tu comunidad de vecinos a la red ciudadana Guifi.net.
 </figcaption>
 </figure>
 
 <figure>
 <img src='media/images/slide2.jpg' />
 <figcaption>
-	Te dejamos todo configurado para usar Internet y el teléfono. Conectar y listo.
+	Te dejamos todo configurado para poder usar Internet y el teléfono. Conectar y listo.
 </figcaption>
 </figure>
 
 <figure>
 <img src='media/images/slide3.jpg' />
 <figcaption>
-	Ofrecemos servicios de valor añadido dentro de Guifi.net
+	Te ofrecemos servicios de valor añadido dentro de Guifi.net como descargas compartidas, correo electrónico...
 </figcaption>
 </figure>
 
 <figure>
 <img src='media/images/slide4.jpg' />
 <figcaption>
-	Estamos integrados en el entorno de la economía social.
+	Trabajamos con el tejido local de la economía social.
 </figcaption>
 </figure>
 
