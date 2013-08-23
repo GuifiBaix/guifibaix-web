@@ -1,3 +1,7 @@
+# hyde
+.hyde_deps
+
+# compiled python
 *.py[cod]
 
 # C extensions
