@@ -1,0 +1,43 @@
+{#% extends "base.j2" %#}
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html>
+<head>
+	<meta charset="{{ resource.meta.charset }}">
+	<meta name="author" content="{{ resource.meta.author }}">
+	<title>GuifiBaix Site</title>
+	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
+	<link rel='stylesheet' href='media/css/fluid_grid.css' />
+	<link rel='stylesheet' href='media/css/site.css' />
+	<!--[if lt IE 9]>
+	<script src="components/html5shiv/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+<div class='logo'>
+	<img src="media/images/guifibaix-logo.png" />
+</div>
+<div class='lemma'>
+	Facilitando que las comunidades de vecinos del Baix Llobregat
+	se desconecten de las grandes telecos.
+</div>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="pmf.html">Información</a></li>
+<li><a href="contacte.html">Contacto</a></li>
+<li><a href="clientes.html">Clientes / Socios</a></li>
+</ul>
+</nav>
+
+
+{% block main %}
+{% endblock main %}
+
+</body>
+</html>

@@ -1,76 +1,32 @@
 ---
-extends:
+extends: frontpage.j2
+default_block: main
+depends: /coder/frontpageslides/*slide
 ---
-<!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="vokimon">
-	<title>GuifiBaix Site</title>
-	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
-	<link rel='stylesheet' href='media/css/fluid_grid.css' />
-	<link rel='stylesheet' href='media/css/site.css' />
-	<!--[if lt IE 9]>
-	<script src="components/html5shiv/html5shiv.js"></script>
-	<![endif]-->
-</head>
-<body>
-<header>
-<div class='logo'>
-	<img src="media/images/guifibaix-logo.png" />
-</div>
-<div class='lemma'>
-	Facilitando que las comunidades de vecinos del Baix Llobregat
-	se desconecten de las grandes telecos.
-</div>
-</header>
-<nav>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="pmf.html">Información</a></li>
-<li><a href="contacte.html">Contacto</a></li>
-<li><a href="clientes.html">Clientes / Socios</a></li>
-</ul>
-</nav>
 
+
+{# Image slider #}
+
+{% set slides_dir = site.content.node_from_relative_path('frontpageslides/') %}
+{% if slides_dir != None %}
 <div class='slider'>
+{% for slide in slides_dir.walk_resources() | sort(attribute='meta.order') %}
+{% if slide.source_file.kind == 'slide' %}
 
 <figure>
-<img src='media/images/slide1.jpg' />
+<img src='{{ slide.meta.image }}' />
 <figcaption>
-	Conectamos tu comunidad de vecinos a la red ciudadana Guifi.net.
+{{ slide.meta.description | typogrify | striptags }}
 </figcaption>
 </figure>
-
-<figure>
-<img src='media/images/slide2.jpg' />
-<figcaption>
-	Te dejamos todo configurado para poder usar Internet y el teléfono. Conectar y listo.
-</figcaption>
-</figure>
-
-<figure>
-<img src='media/images/slide3.jpg' />
-<figcaption>
-	Te ofrecemos servicios de valor añadido dentro de Guifi.net como descargas compartidas, correo electrónico...
-</figcaption>
-</figure>
-
-<figure>
-<img src='media/images/slide4.jpg' />
-<figcaption>
-	Trabajamos con el tejido local de la economía social.
-</figcaption>
-</figure>
+{% endif %}
+{% endfor %}
 
 </div>
 
+{% endif %}
 
-<section class='highlights container_12'>
+<article class='highlights container_12'>
 
 <section class='point grid_4'>
 <h2>Social</h2>
@@ -100,9 +56,4 @@ o buscar a alguien que se lo haga.
 La red está basada en estandares abiertos.
 </section>
 
-
-</section>
-
-
-</body>
-</html>
+</article>
