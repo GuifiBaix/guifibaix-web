@@ -9,182 +9,11 @@
 	<meta name="author" content="vokimon">
 	<title>GuifiBaix Site</title>
 	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
+	<link rel='stylesheet' href='media/css/fluid_grid.css' />
+	<link rel='stylesheet' href='media/css/site.css' />
 	<!--[if lt IE 9]>
 	<script src="components/html5shiv/html5shiv.js"></script>
 	<![endif]-->
-	<link rel='stylesheet' href='media/css/fluid_grid.css' />
-<style>
-html
-{
-	font-family: sans-serif;
-	background: white;
-	color: black;
-}
-body
-{
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Header */
-header
-{
-	display: -webkit-flex;
-	display:         flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-
-	-webkit-box-align: center;
-	-moz-box-align: center; /* OLD… */
-	-ms-flex-align: center; /* You know the drill now… */
-	-webkit-align-items: center;
-	align-items: center;
-}
-
-header > .logo
-{
-	width: 240px;
-	height: 129px;
-	-webkit-flex-shrink: 0;
-	flex-shrink: 0;
-}
-
-header > .logo > img
-{
-	display: block;
-}
-
-header > .lemma
-{
-	padding: 10px;
-	font-size: 3ex;
-	vertical-align: bottom;
-	display: table-cell;
-	flex-grow: 1;
-}
-
-/* Navigation menu */
-nav
-{
-	padding: 0;
-	width: 100%;
-}
-nav > ul
-{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	padding-left: 0;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-}
-nav > ul > li
-{
-	margin: 1ex;
-	text-align: center;
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
-}
-nav a:link,
-nav a:active,
-nav a:visited,
-nav a:hover
-{
-	background: #aa3333;
-	-webkit-border-radius: .5em;
-	   -moz-border-radius: .5em;
-	        border-radius: .5em;
-	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.7);
-	   -moz-box-shadow: 0 2px 4px rgba(0,0,0,.7);
-	        box-shadow: 0 2px 4px rgba(0,0,0,.7);
-	padding: 1.4ex;
-	color: white;
-	display: block;
-	text-decoration: none;
-	font-weight: bold;
-	text-shadow: 0 2px 2px rgba(0,0,0,.7);
-}
-nav a:hover
-{
-	background: #bb4433;
-	text-shadow: 0 4px 4px rgba(1,1,0,.7);
-	-webkit-box-shadow: 0 2px 4px rgba(1,1,0,.7);
-	   -moz-box-shadow: 0 2px 4px rgba(1,1,0,.7);
-	        box-shadow: 0 2px 4px rgba(1,1,0,.7);
-}
-nav a:active
-{
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
-	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
-	        box-shadow: 0 1px 2px rgba(0,0,0,.7);
-}
-
-
-/* Image slider */
-
-.slider
-{
-	width: 90%;
-	height: 50ex;
-	margin: 3ex;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	top:0;
-	left:0;
-}
-
-.slider > figure
-{
-	width: 100%;
-	height: 100%;
-	text-align: right;
-	padding: 0;
-	margin: 0;
-
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	-webkit-box-shadow: 0 4px 8px rgba(0,0,0,.7);
-	   -moz-box-shadow: 0 4px 8px rgba(0,0,0,.7);
-	        box-shadow: 0 4px 8px rgba(0,0,0,.7);
-}
-.slider > figure > img
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.slider > figure > figcaption
-{
-	position: absolute;
-	font-size: 140%;
-	width: 40%;
-	bottom: 3ex;
-	right: 3ex;
-	padding: 3ex;
-	background: #aaa;
-	background: rgba(1,0,1,0.6);
-	color: #ffd;
-	text-shadow: 0 2px 2px rgba(0,0,0,.7);
-	-webkit-border-radius: .5em;
-	   -moz-border-radius: .5em;
-	        border-radius: .5em;
-}
-
-.slider > figure:nth-child(odd) figcaption
-{
-	left: 3ex;
-	text-align: left;
-}
-
-</style>
 </head>
 <body>
 <header>
@@ -199,7 +28,7 @@ nav a:active
 <nav>
 <ul>
 <li><a href="index.html">Inicio</a></li>
-<li><a href="pmf.html">Preguntas comunes</a></li>
+<li><a href="pmf.html">Información</a></li>
 <li><a href="contacte.html">Contacto</a></li>
 <li><a href="clientes.html">Clientes / Socios</a></li>
 </ul>
