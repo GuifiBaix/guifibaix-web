@@ -11,7 +11,6 @@ plugins:
     - hyde.ext.plugins.text.TextlinksPlugin
 context:
     data:
-        tweet_via: ringce
         menu:
             -
                 name: Home
@@ -40,7 +39,8 @@ context:
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
-    author: Lakshmi Vyasarajan
+    author: David García Garzón
+    charset: utf-8
 sorter:
     time:
         attr:
