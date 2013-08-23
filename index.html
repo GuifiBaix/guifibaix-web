@@ -1,0 +1,272 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="vokimon">
+	<title>GuifiBaix Site</title>
+	<script data-main="media/js/main" src="/media/js/libs/require-2.1.8.js"></script>
+<style>
+html
+{
+	font-family: sans-serif;
+	background: white;
+	color: black;
+}
+body
+{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+header
+{
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+header > .logo
+{
+	flex-shrink: 0;
+}
+
+header > .logo > img
+{
+	display: block;
+}
+
+header > .lemma
+{
+	padding: 10px;
+	margin-left: 6ex;
+	font-size: 3ex;
+	vertical-align: bottom;
+	display: table-cell;
+	flex-grow: 1;
+}
+
+
+
+nav
+{
+	padding: 0;
+	width: 100%;
+}
+nav a:link,
+nav a:active,
+nav a:visited,
+nav a:hover
+{
+	background: #aa3333;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	   -moz-box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	        box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	padding: 1.4ex;
+	color: white;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 2px 2px rgba(0,0,0,.7);
+}
+nav a:hover
+{
+	color: #fef;
+	background: #aa4444;
+	text-shadow: 0 4px 4px rgba(0,0,0,.3);
+}
+nav a:active
+{
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	        box-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+nav > ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-left: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+
+nav > ul > li
+{
+	margin: 1ex;
+	text-align: center;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+
+}
+.slider
+{
+	width: 90%;
+	height: 40ex;
+	margin: 1ex;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top:0;
+	left:0;
+}
+
+.slider > figure
+{
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	-webkit-box-shadow: 0 4px 8px rgba(0,0,0,.7);
+	   -moz-box-shadow: 0 4px 8px rgba(0,0,0,.7);
+	        box-shadow: 0 4px 8px rgba(0,0,0,.7);
+}
+.slider > figure > img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.slider > figure > figcaption
+{
+	position: absolute;
+	font-size: 120%;
+	width: 40%;
+	bottom: 3ex;
+	right: 3ex;
+	padding: 2ex;
+	background: #aaa;
+	background: rgba(1,0,1,0.6);
+	color: #ffd;
+	text-shadow: 0 2px 2px rgba(0,0,0,.7);
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+}
+
+.slider > figure:nth-child(odd) figcaption
+{
+	left: 3ex;
+	text-align: left;
+}
+
+.highlights
+{
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+.highlights > .point
+{
+	margin: 2ex;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class='logo'>
+	<img src="media/images/guifibaix-logo.png" />
+</div>
+<div class='lemma'>
+	Facilitando que las comunidades de vecinos del Baix Llobregat
+	se desconecten de las grandes telecos.
+</div>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="pmf.html">Preguntas comunes</a></li>
+<li><a href="contacte.html">Contacto</a></li>
+<li><a href="clientes.html">Clientes / Socios</a></li>
+</ul>
+</nav>
+
+<div class='slider'>
+
+<figure>
+<img src='media/images/slide1.jpg' />
+<figcaption>
+	Conectamos tu comunidad de vecinos a la red Guifi.net.
+</figcaption>
+</figure>
+
+<figure>
+<img src='media/images/slide2.jpg' />
+<figcaption>
+	Te dejamos todo configurado para usar Internet y el teléfono. Conectar y listo.
+</figcaption>
+</figure>
+
+<figure>
+<img src='media/images/slide3.jpg' />
+<figcaption>
+	Ofrecemos servicios de valor añadido dentro de Guifi.net
+</figcaption>
+</figure>
+
+<figure>
+<img src='media/images/slide4.jpg' />
+<figcaption>
+	Estamos integrados en el entorno de la economía social.
+</figcaption>
+</figure>
+
+</div>
+
+
+<section class='highlights'>
+
+<section class='point'>
+<h2>Economía social</h2>
+<p>
+Pretendemos ser una via de escape de los abusos
+del oligopolio de las grandes telecos.
+Nuestros principios son que tanto el trabajador como el usuario
+tienen que tener una condiciones justas.
+</p>
+
+</section>
+
+<section class='point'>
+<h2>Econòmico</h2>
+No tenemos que hinchar ninguna cuenta de resultados,
+solo cubrir los costes.
+Si encontramos maneras de reducir costes,
+los beneficios se reinvierten en mejorar la red
+o se repercuten en las cuotas.
+</section>
+
+<section class='point'>
+<h2>Libre</h2>
+No se ata al cliente.
+Cualquiera puede instalar o mantener su parte de la red
+o buscar a alguien que se lo haga.
+La red está basada en estandares abiertos.
+</section>
+
+
+</section>
+
+
+</body>
+</html>
