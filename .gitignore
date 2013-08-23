@@ -1,6 +1,9 @@
 # hyde
 .hyde_deps
 
+# vim
+*.sw?
+
 # compiled python
 *.py[cod]
 
