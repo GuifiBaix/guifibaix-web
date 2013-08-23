@@ -56,21 +56,23 @@ nav
 }
 nav > ul
 {
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	padding-left: 0;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
+	display:inline-block;
+	position:relative;
 }
 nav > ul > li
 {
+	float: left;
+	position: relative;
 	margin: 1ex;
+	margin-right: 1%;
+	margin-left: 1%;
+	width: 23%; /* 100%/4 - 4*2% */
 	text-align: center;
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
 }
 nav a:link,
 nav a:active,
@@ -84,7 +86,8 @@ nav a:hover
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.7);
 	   -moz-box-shadow: 0 2px 4px rgba(0,0,0,.7);
 	        box-shadow: 0 2px 4px rgba(0,0,0,.7);
-	padding: 1.4ex;
+	padding-top: 1.4ex;
+	padding-bottom: 1.4ex;
 	color: white;
 	display: block;
 	text-decoration: none;
