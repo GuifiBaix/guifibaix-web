@@ -9,6 +9,7 @@
 	<meta name="author" content="vokimon">
 	<title>GuifiBaix Site</title>
 	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
+<link rel='stylesheet' href='media/css/fluid_grid.css' />
 <style>
 html
 {
@@ -111,7 +112,7 @@ nav > ul > li
 {
 	width: 90%;
 	height: 40ex;
-	margin: 1ex;
+	margin: 3ex;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -166,6 +167,7 @@ nav > ul > li
 	text-align: left;
 }
 
+/*
 .highlights
 {
 	display: -webkit-flex;
@@ -179,7 +181,12 @@ nav > ul > li
 	-webkit-flex-grow: 1;
 	        flex-grow: 1;
 }
+*/
 
+.highlights > .point > h2
+{
+	font-variant: small-caps;
+}
 </style>
 </head>
 <body>
@@ -234,29 +241,29 @@ nav > ul > li
 </div>
 
 
-<section class='highlights'>
+<section class='highlights container_12'>
 
-<section class='point'>
-<h2>Economía social</h2>
+<section class='point grid_4'>
+<h2>Social</h2>
 <p>
-Pretendemos ser una via de escape de los abusos
+Pretendemos ser una via de escape a los abusos
 del oligopolio de las grandes telecos.
 Nuestros principios son que tanto el trabajador como el usuario
-tienen que tener una condiciones justas.
+tienen que tener unas condiciones justas.
 </p>
 
 </section>
 
-<section class='point'>
+<section class='point grid_4'>
 <h2>Econòmico</h2>
 No tenemos que hinchar ninguna cuenta de resultados,
 solo cubrir los costes.
 Si encontramos maneras de reducir costes,
-los beneficios se reinvierten en mejorar la red
+los beneficios se reinvierten en mejorar el servicio
 o se repercuten en las cuotas.
 </section>
 
-<section class='point'>
+<section class='point grid_4'>
 <h2>Libre</h2>
 No se ata al cliente.
 Cualquiera puede instalar o mantener su parte de la red
