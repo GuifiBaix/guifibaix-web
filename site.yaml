@@ -41,6 +41,10 @@ meta:
     created: !!timestamp 2010-01-01 00:00:00
     author: David García Garzón
     charset: utf-8
+    site_title: GuifiBaix.coop
+    motto: >
+        Facilitant que els veïns del Baix Llobregat
+        es desempelleguin de les grans telecos.
 sorter:
     time:
         attr:

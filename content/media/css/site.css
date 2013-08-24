@@ -39,7 +39,7 @@ header > .logo > img
 	display: block;
 }
 
-header > .lemma
+header > .motto
 {
 	padding: 10px;
 	font-size: 3ex;
@@ -171,4 +171,23 @@ nav a:active
 	left: 3ex;
 	text-align: left;
 }
+
+.highlights .point
+{
+	min-width: 30ex;
+}
+
+.pmf
+{
+	width: 80%;
+	margin: auto;
+	font-size: 150%;
+}
+
+.pmf > h2
+{
+	font-size: 90%;
+	border-bottom: 1pt solid #883333;
+}
+
 

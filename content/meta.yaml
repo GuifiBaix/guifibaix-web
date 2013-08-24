@@ -1,0 +1,2 @@
+extends: frontpage.j2
+default_block: main

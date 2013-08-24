@@ -1,16 +1,16 @@
 ---
 extends: frontpage.j2
+title: Inici
 default_block: main
 depends: /coder/frontpageslides/*slide
 ---
-
 
 {# Image slider #}
 
 {% set slides_dir = site.content.node_from_relative_path('frontpageslides/') %}
 {% if slides_dir != None %}
 <div class='slider'>
-{% for slide in slides_dir.walk_resources() | sort(attribute='meta.order') %}
+{% for slide in slides_dir.walk_resources() | sort(attribute='path') %}
 {% if slide.source_file.kind == 'slide' %}
 
 <figure>
@@ -31,29 +31,27 @@ depends: /coder/frontpageslides/*slide
 <section class='point grid_4'>
 <h2>Social</h2>
 <p>
-Pretendemos ser una via de escape a los abusos
-del oligopolio de las grandes telecos.
-Nuestros principios son que tanto el trabajador como el usuario
-tienen que tener unas condiciones justas.
+Volem obrir alternatives a l'oligopoli de les grans empreses de telecomunicacions i els seus abusos.
+Construïm un entorn just i de coŀlaboració entre treballadors i usuaris.
 </p>
 
 </section>
 
 <section class='point grid_4'>
-<h2>Econòmico</h2>
-No tenemos que hinchar ninguna cuenta de resultados,
-solo cubrir los costes.
-Si encontramos maneras de reducir costes,
-los beneficios se reinvierten en mejorar el servicio
-o se repercuten en las cuotas.
+<h2>Econòmic</h2>
+No ens cal farcir el compte de resultats,
+només cobrir costos.
+Si trobem formes de reduir-los,
+els beneficis es reinverteixen en millorar el servei
+o es repercuteix en els quotes.
 </section>
 
 <section class='point grid_4'>
-<h2>Libre</h2>
-No se ata al cliente.
-Cualquiera puede instalar o mantener su parte de la red
-o buscar a alguien que se lo haga.
-La red está basada en estandares abiertos.
+<h2>Lliure</h2>
+No volem usuaris lligats.
+La xarxa està basada en estàndars oberts i els equips pertanyen als usuaris.
+Qualsevol pot instaŀlar o mantenir la seva part de la xarxa
+o trobar a algú altre que ho faci.
 </section>
 
 </article>
