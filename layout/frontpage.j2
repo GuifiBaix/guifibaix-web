@@ -10,21 +10,31 @@
 	<meta name="author" content="{{ resource.meta.author }}">
 	<title>{{ resource.meta.site_title }} {{
 		 (" - " + resource.meta.title) if resource.meta.title }}</title>
-	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
-	<link rel='stylesheet' href='media/css/fluid_grid.css' />
+
+<!--[if lt IE 8]>
 	<link rel='stylesheet' href='media/css/normalize-1.1.2.css' />
-<!--	<link rel='stylesheet' href='media/css/normalize-2.1.2.css' /> -->
+<![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+	<link rel='stylesheet' href='media/css/normalize-2.1.2.css' />
+<!--<![endif]-->
+
 	<link rel='stylesheet' href='media/css/site.css' />
-	<!--[if lt IE 9]>
+
+<!--[if lt IE 9]>
 	<script src="components/html5shiv/html5shiv.js"></script>
-	<![endif]-->
+<![endif]-->
+
+	<script data-main="media/js/main" src="media/js/libs/require-2.1.8.js"></script>
+
 </head>
 <body>
 <header>
 <div class='logo'>
 	<img src="{{ resource.meta.logo }}" />
 </div>
-<div class='motto'>{{ resource.meta.motto }}</div>
+<div class='motto'>
+	{{ resource.meta.motto }}
+</div>
 </header>
 <nav>
 <ul>

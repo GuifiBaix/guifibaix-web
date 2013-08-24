@@ -12,40 +12,29 @@ body
 }
 
 /* Header */
+
 header
 {
-	display: -webkit-flex;
-	display:         flex;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-
-	-webkit-box-align: center;
-	-moz-box-align: center; /* OLD… */
-	-ms-flex-align: center; /* You know the drill now… */
-	-webkit-align-items: center;
-	align-items: center;
+	min-height: 130px; /* logo_height + 1px */
 }
-
 header > .logo
 {
 	width: 240px;
-	height: 129px;
-	-webkit-flex-shrink: 0;
-	flex-shrink: 0;
+	height: 129px; /* logo_height */
+	float: left;
 }
-
 header > .logo > img
 {
 	display: block;
 }
-
 header > .motto
 {
+	height: 109px; /* logo_height - 2*10px (padding) */
 	padding: 10px;
 	font-size: 3ex;
-	vertical-align: bottom;
 	display: table-cell;
-	flex-grow: 1;
+	vertical-align: middle;
+	text-align: right;
 }
 
 /* Navigation menu */
@@ -172,9 +161,44 @@ nav a:active
 	text-align: left;
 }
 
-.highlights .point
+/* Highlights */
+
+.highlights
 {
-	min-width: 30ex;
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+	padding: 0;
+}
+.highlights:after
+{
+	display: block;
+	clear: both;
+	content: " ";
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+.highlights > .point
+{
+	display: inline;
+	float: left;
+	margin-right: 0%;
+	margin-left: 2%;
+	max-width: 31.33%;
+	min-width: 10ex;
+	padding: 2px;
+}
+.highlights > .point:first-child
+{
+	margin-left: 0.45%;
+}
+
+.highlights > .point > h2
+{
+	margin-top: 2px;
 }
 
 .pmf
