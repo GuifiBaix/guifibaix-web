@@ -1,7 +1,8 @@
 require.config({
 	baseUrl: 'libs',
 	paths: {
-		jquery: 'http://code.jquery.com/jquery-2.0.3.min',
+//		jquery: 'http://code.jquery.com/jquery-2.0.3.min',
+		jquery: 'http://code.jquery.com/jquery-1.10.2.min', // Supports IE<9 (IE6 minimum)
 		modernizr: 'modernizr-1.7.min',
 		dd_belatedpng: 'dd_belatedpng'
 	}
