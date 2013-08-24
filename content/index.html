@@ -13,12 +13,12 @@ depends: /coder/frontpageslides/*slide
 {% for slide in slides_dir.walk_resources() | sort(attribute='path') %}
 {% if slide.source_file.kind == 'slide' %}
 
-<figure>
+<div class='slide'>
 <img src='{{ slide.meta.image }}' />
-<figcaption>
-{{ slide.meta.description | typogrify | striptags }}
-</figcaption>
-</figure>
+<div class='slidetext'>
+{{ slide.meta.description }}
+</div>
+</div>
 {% endif %}
 {% endfor %}
 
@@ -43,7 +43,7 @@ No ens cal farcir el compte de resultats,
 només cobrir costos.
 Si trobem formes de reduir-los,
 els beneficis es reinverteixen en millorar el servei
-o es repercuteix en els quotes.
+o es repercuteix en les quotes.
 </section>
 
 <section class='point grid_4'>

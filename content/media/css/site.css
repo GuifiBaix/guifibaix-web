@@ -125,7 +125,7 @@ nav a:active
 	left:0;
 }
 
-.slider > figure
+.slider > .slide
 {
 	width: 100%;
 	height: 100%;
@@ -142,14 +142,14 @@ nav a:active
 	   -moz-box-shadow: 0 4px 8px rgba(0,0,0,.7);
 	        box-shadow: 0 4px 8px rgba(0,0,0,.7);
 }
-.slider > figure > img
+.slider > .slide > img
 {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-.slider > figure > figcaption
+.slider > .slide > .slidetext
 {
 	position: absolute;
 	font-size: 140%;
@@ -166,7 +166,7 @@ nav a:active
 	        border-radius: .5em;
 }
 
-.slider > figure:nth-child(odd) figcaption
+.slider > .slide:nth-child(odd) .slidetext
 {
 	left: 3ex;
 	text-align: left;

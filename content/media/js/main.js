@@ -11,7 +11,7 @@ require(['jquery'], function($) {
 
   // settings
   var $slider = $('.slider'); // class or id of carousel slider
-  var $slide = 'figure'; // could also use 'img' if you're not using a ul
+  var $slide = '.slide'; // could also use 'img' if you're not using a ul
   var $transition_time = 1000; // 1 second
   var $time_between_slides = 4000; // 4 seconds
 
