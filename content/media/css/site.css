@@ -10,6 +10,19 @@ body
 	margin-left: auto;
 	margin-right: auto;
 }
+a:link,
+a:hover,
+a:visited,
+a:active
+{
+	color: #a55;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #e55;
+}
 
 /* Header */
 
