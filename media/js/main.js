@@ -1,10 +1,16 @@
 require.config({
-	baseUrl: 'libs',
+	baseUrl: 'media/js/libs/',
 	paths: {
 //		jquery: 'http://code.jquery.com/jquery-2.0.3.min',
 		jquery: 'http://code.jquery.com/jquery-1.10.2.min', // Supports IE<9 (IE6 minimum)
-		modernizr: 'modernizr-1.7.min',
-		dd_belatedpng: 'dd_belatedpng'
+//		fancybox: 'http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
+		fancybox: 'jquery.fancybox-2.1.5',
+	},
+	shim: {
+		'fancybox': {
+			deps: ['jquery'],
+			exports: 'jQuery.fn.fancybox'
+		}
 	}
 });
 
@@ -44,3 +50,8 @@ require(['jquery'], function($) {
 
 });
 
+require(['jquery', 'fancybox'], function($,fb) {
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+});
