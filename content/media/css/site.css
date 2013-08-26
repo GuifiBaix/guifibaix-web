@@ -24,6 +24,60 @@ a:hover
 	color: #e55;
 }
 
+.figureright,
+.figureleft
+{
+	display:block;
+	position: relative;
+	clear: both;
+	width: 25%;
+}
+
+.figureright
+{
+	float: right;
+	margin-left: 5px;
+}
+
+.figureleft
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.fancybox:before,
+.fancybox:before
+{
+	position: absolute;
+	display:block;
+	text-align: center;
+	margin-left: 1em;
+	margin-right: 1em;
+	font-size: 80%;
+	bottom: 10%;
+	padding: 5px;
+	content: "Click per ampliar";
+	background: #aaa;
+	background: rgba(0.2,0.2,0.2,0.5);
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+}
+
+.figureleft:after,
+.figureright:after
+{
+	display: block;
+	clear: both;
+	content: " ";
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+
+
 /* Header */
 
 header
@@ -160,8 +214,8 @@ header > .motto
 	right: 3ex;
 	padding: 3ex;
 	background: #aaa;
-	background: rgba(1,0,1,0.6);
-	color: #ffd;
+	background: rgba(1,1,1,0.6);
+	color: #ffe;
 	text-shadow: 0 2px 2px rgba(0,0,0,.7);
 	-webkit-border-radius: .5em;
 	   -moz-border-radius: .5em;
