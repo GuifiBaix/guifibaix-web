@@ -51,12 +51,12 @@ header > .motto
 }
 
 /* Navigation menu */
-nav
+.topmenu
 {
 	padding: 0;
 	width: 100%;
 }
-nav > ul
+.topmenu > ul
 {
 	width: 100%;
 	margin: 0;
@@ -66,7 +66,7 @@ nav > ul
 	display:inline-block;
 	position:relative;
 }
-nav > ul > li
+.topmenu > ul > li
 {
 	float: left;
 	position: relative;
@@ -76,10 +76,10 @@ nav > ul > li
 	width: 23%; /* 100%/4 - 4*2% */
 	text-align: center;
 }
-nav a:link,
-nav a:active,
-nav a:visited,
-nav a:hover
+.topmenu a:link,
+.topmenu a:active,
+.topmenu a:visited,
+.topmenu a:hover
 {
 	background: #aa3333;
 	-webkit-border-radius: .5em;
@@ -96,7 +96,7 @@ nav a:hover
 	font-weight: bold;
 	text-shadow: 0 2px 2px rgba(0,0,0,.7);
 }
-nav a:hover
+.topmenu a:hover
 {
 	background: #bb4433;
 	text-shadow: 0 4px 4px rgba(1,1,0,.7);
@@ -104,7 +104,7 @@ nav a:hover
 	   -moz-box-shadow: 0 2px 4px rgba(1,1,0,.7);
 	        box-shadow: 0 2px 4px rgba(1,1,0,.7);
 }
-nav a:active
+.topmenu a:active
 {
 	background: #aa4433;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
