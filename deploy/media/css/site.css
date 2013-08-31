@@ -24,6 +24,7 @@ a:hover
 	color: #e55;
 }
 
+.figurewide,
 .figureright,
 .figureleft
 {
@@ -31,6 +32,12 @@ a:hover
 	position: relative;
 	clear: both;
 	width: 25%;
+}
+.figurewide
+{
+	text-align: center;
+	width: 90%;
+	margin: auto;
 }
 
 .figureright
@@ -44,25 +51,31 @@ a:hover
 	float: left;
 	margin-right: 5px;
 }
-
-.fancybox:before,
 .fancybox:before
 {
+	color: white !important;
 	position: absolute;
-	display:block;
+	display:inline;
 	text-align: center;
-	margin-left: 1em;
-	margin-right: 1em;
-	font-size: 80%;
-	bottom: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 60%;
+	top: 10%;
 	padding: 5px;
-	content: "Click per ampliar";
-	background: #aaa;
-	background: rgba(0.2,0.2,0.2,0.5);
 	-webkit-border-radius: .5em;
 	   -moz-border-radius: .5em;
 	        border-radius: .5em;
+	content: "Click per ampliar";
+	background: #aaa;
+	background: rgb(0.2, 0.2, 0.2) transparent;
+	/* RGBa with 0.6 opacity */
+	background: rgba(0.2, 0.2, 0.2, 0.5);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
+
 
 .figureleft:after,
 .figureright:after
@@ -194,15 +207,21 @@ header > .motto
 	top: 0;
 	left: 0;
 
-	-webkit-box-shadow: 0 4px 8px rgba(0,0,0,.7);
-	   -moz-box-shadow: 0 4px 8px rgba(0,0,0,.7);
-	        box-shadow: 0 4px 8px rgba(0,0,0,.7);
+	-webkit-box-shadow: 2px 8px 16px rgba(0,0,0,.7);
+	   -moz-box-shadow: 2px 8px 16px rgba(0,0,0,.7);
+	        box-shadow: 2px 8px 16px rgba(0,0,0,.7);
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
 }
 .slider > .slide > img
 {
 	display: block;
 	width: 100%;
 	height: 100%;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
 }
 
 .slider > .slide > .slidetext
