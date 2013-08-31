@@ -18,7 +18,6 @@ a:active
 	color: #a55;
 	text-decoration: none;
 }
-
 a:hover
 {
 	color: #e55;
@@ -97,17 +96,17 @@ header
 {
 	min-height: 130px; /* logo_height + 1px */
 }
-header > .logo
+header .logo
 {
 	width: 240px;
 	height: 129px; /* logo_height */
 	float: left;
 }
-header > .logo > img
+header .logo img
 {
 	display: block;
 }
-header > .motto
+header .motto
 {
 	height: 109px; /* logo_height - 2*10px (padding) */
 	padding: 10px;
@@ -122,8 +121,9 @@ header > .motto
 {
 	padding: 0;
 	width: 100%;
+	text-align: center;
 }
-.topmenu > ul
+.topmenu ul
 {
 	width: 100%;
 	margin: 0;
@@ -133,7 +133,7 @@ header > .motto
 	display:inline-block;
 	position:relative;
 }
-.topmenu > ul > li
+.topmenu ul li
 {
 	float: left;
 	position: relative;
@@ -141,7 +141,6 @@ header > .motto
 	margin-right: 1%;
 	margin-left: 1%;
 	width: 23%; /* 100%/4 - 4*2% */
-	text-align: center;
 }
 .topmenu a:link,
 .topmenu a:active,
@@ -194,7 +193,7 @@ header > .motto
 	left:0;
 }
 
-.slider > .slide
+.slider .slide
 {
 	width: 100%;
 	height: 100%;
@@ -214,7 +213,7 @@ header > .motto
 	   -moz-border-radius: .5em;
 	        border-radius: .5em;
 }
-.slider > .slide > img
+.slider .slide img
 {
 	display: block;
 	width: 100%;
@@ -224,7 +223,7 @@ header > .motto
 	        border-radius: .5em;
 }
 
-.slider > .slide > .slidetext
+.slider .slide .slidetext
 {
 	position: absolute;
 	font-size: 140%;
@@ -241,7 +240,7 @@ header > .motto
 	        border-radius: .5em;
 }
 
-.slider > .slide:nth-child(odd) .slidetext
+.slider .slide:nth-child(odd) .slidetext
 {
 	left: 3ex;
 	text-align: left;
@@ -267,7 +266,7 @@ header > .motto
 	width: 0;
 	height: 0;
 }
-.highlights > .point
+.highlights .point
 {
 	display: inline;
 	float: left;
@@ -277,12 +276,12 @@ header > .motto
 	min-width: 10ex;
 	padding: 2px;
 }
-.highlights > .point:first-child
+.highlights .point:first-child
 {
 	margin-left: 0.45%;
 }
 
-.highlights > .point > h2
+.highlights .point  h2
 {
 	margin-top: 2px;
 }
@@ -294,7 +293,7 @@ header > .motto
 	font-size: 150%;
 }
 
-.pmf > h2
+.pmf h2
 {
 	font-size: 90%;
 	border-bottom: 1pt solid #883333;
