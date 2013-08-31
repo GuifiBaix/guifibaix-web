@@ -1,8 +1,15 @@
+function isOldIE () {
+  var myNav = navigator.userAgent.toLowerCase();
+  if (myNav.indexOf('msie') != -1) return false;
+  return parseInt(myNav.split('msie')[1]) < 9;
+}
+
 require.config({
 	baseUrl: 'media/js/libs/',
 	paths: {
-//		jquery: 'http://code.jquery.com/jquery-2.0.3.min',
-		jquery: 'http://code.jquery.com/jquery-1.10.2.min', // Supports IE<9 (IE6 minimum)
+		jquery: isOldIE() ? 
+			'http://code.jquery.com/jquery-1.10.2.min':
+			'http://code.jquery.com/jquery-2.0.3.min',
 //		fancybox: 'http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
 		fancybox: 'jquery.fancybox-2.1.5',
 	},
