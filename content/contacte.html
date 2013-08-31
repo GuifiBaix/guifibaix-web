@@ -1,0 +1,38 @@
+---
+title: Contacte
+dades:
+    - titol: Conectivitat
+      pregunta: Vols que saber si t'arriba la Guifi.net?
+      resposta: Demana'ns una prova de connectivitat sense compromís.
+      imatge: media/images/guifibaix-logo.png
+    - titol: Pressupostos
+      pregunta: Vols saber que costaria posar Guifi.net al teu edifici o com a particular?
+      resposta: Demana'ns un pressupost.
+      imatge: media/images/slide2.jpg
+    - titol: Dubtes
+      pregunta: Vols aclarir dubtes o que et donem informació?
+      resposta: Pregunta'ns o demana una reunió amb nosaltres.
+      imatge: media/images/guifibaix-logo.png
+    - titol: Fes-t'ho tu
+      pregunta: Vols muntar-t'ho tu pel teu compte?
+      resposta: Pregunta'ns la configuració que has de fer servir.
+      imatge: media/images/guifi-logo.png
+
+---
+<style>
+</style>
+<div class='contact'>
+{% for item in resource.meta.dades %}
+<a
+	class='item'
+	style="background-image: url('{{item.imatge}}');"
+	href=''
+	>
+	
+	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.pregunta }}</div>
+	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.resposta }}</div>
+</a>
+{% endfor %}
+
+</div>
+

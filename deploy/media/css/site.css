@@ -300,3 +300,81 @@ header > .motto
 	border-bottom: 1pt solid #883333;
 }
 
+/* Contact page */
+
+.contact
+{
+	text-align: center;
+	margin-right: 2%;
+}
+.contact .item
+{
+	position: relative;
+	display: inline-block;
+	top: 0;
+	color: #bbb;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 15em;
+	height: 10em;
+	width: 30%;
+	margin-left:2%;
+	margin-bottom: 4ex;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	-webkit-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	   -moz-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	        box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+}
+.contact .item:hover
+{
+	-webkit-box-shadow: 2px 8px 16px rgba(1,1,0,.7);
+	   -moz-box-shadow: 2px 8px 16px rgba(1,1,0,.7);
+	        box-shadow: 2px 8px 16px rgba(1,1,0,.7);
+}
+.contact .item .pregunta,
+.contact .item .resposta
+{
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	font-weight: bold;
+	background: #aaa;
+	background: rgba(80,80,80,0.9);
+	position: absolute;
+	top: 2ex;
+	left: 3%;
+	width: 90%;
+	padding: 2%;
+}
+.contact .item h2
+{
+	color: white;
+	margin: 0;
+}
+
+.contact .item:hover .pregunta,
+.contact .item .resposta
+{
+	display: none;
+}
+.contact .item .pregunta,
+.contact .item:hover .resposta
+{
+	display: block;
+}
+.contact .item img
+{
+	display: block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+}
+
+.contact .item:hover
+{
+	color: #ffa;
+}
+
