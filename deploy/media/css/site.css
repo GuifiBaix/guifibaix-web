@@ -314,7 +314,10 @@ header > .motto
 	top: 0;
 	color: #bbb;
 	background-repeat: no-repeat;
-	background-size: cover;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 	min-width: 15em;
 	height: 10em;
 	width: 30%;
