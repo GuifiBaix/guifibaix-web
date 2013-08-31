@@ -66,9 +66,9 @@ a:hover
 	        border-radius: .5em;
 	content: "Click per ampliar";
 	background: #aaa;
-	background: rgb(0.2, 0.2, 0.2) transparent;
+	background: rgb(100, 100, 100) transparent;
 	/* RGBa with 0.6 opacity */
-	background: rgba(0.2, 0.2, 0.2, 0.5);
+	background: rgba(100, 100, 100, 0.5);
 	/* For IE 5.5 - 7*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 	/* For IE 8*/
@@ -342,7 +342,7 @@ header .motto
 	   -moz-border-radius: .5em;
 	        border-radius: .5em;
 	font-weight: bold;
-	background: #aaa;
+	background: #666;
 	background: rgba(80,80,80,0.9);
 	position: absolute;
 	top: 2ex;
