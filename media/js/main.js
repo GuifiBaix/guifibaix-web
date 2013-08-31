@@ -3,8 +3,8 @@ require.config({
 	paths: {
 //		jquery: 'http://code.jquery.com/jquery-2.0.3.min',
 		jquery: 'http://code.jquery.com/jquery-1.10.2.min', // Supports IE<9 (IE6 minimum)
-//		fancybox: 'http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
-		fancybox: 'jquery.fancybox-2.1.5',
+		fancybox: 'http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
+//		fancybox: 'jquery.fancybox-2.1.5',
 	},
 	shim: {
 		'fancybox': {
