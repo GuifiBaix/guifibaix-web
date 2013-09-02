@@ -22,6 +22,28 @@ a:hover
 {
 }
 
+.socis form:before,
+.contactform form:before
+{
+	postion: relative;
+	color: #d44;
+	font-weight: bold;
+	text-align: center;
+	content: 'No està operatiu encara';
+	position: relative;
+	width: 100%;
+	padding: 1ex;
+	margin: 1ex;
+	background: white;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	-webkit-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	   -moz-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	        box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	behavior: url(media/js/libs/PIE.htc);
+}
+
 form
 {
 	background: #555;
@@ -81,7 +103,7 @@ form a:link.close,
 form a:visited.close
 {
 	content: 'X';
-	display: black;
+	display: block;
 	background: black;
 	color: white;
 	border: 3pt solid black;
@@ -92,7 +114,7 @@ form a:visited.close
 	width: 2ex;
 	height: 2ex;
 	padding: 0.5ex;
-	vertical-align: center;
+	vertical-align: middle;
 	text-align: center;
 	-webkit-border-radius: 3ex;
 	   -moz-border-radius: 3ex;
@@ -211,15 +233,17 @@ form a:visited.close
 	padding-left: 0;
 	display:inline-block;
 	position:relative;
+	text-align: center;
 }
 .topmenu ul li
 {
-	float: left;
 	position: relative;
+	display: inline-block;
 	margin: 1ex;
 	margin-right: 1%;
 	margin-left: 1%;
-	width: 23%; /* 100%/4 - 4*2% */
+	width: 21%; /* 100%/4 - 4*2% */
+	min-width: 8em;
 }
 .topmenu a:link,
 .topmenu a:active,
@@ -273,6 +297,11 @@ form a:visited.close
 	position: relative;
 	top:0;
 	left:0;
+
+	padding-bottom: 26.6%; /* 8:3 */
+	padding-top: 25px;
+	height: 0;
+
 }
 
 .slider .slide:before
