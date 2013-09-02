@@ -429,8 +429,16 @@ form a:visited.close
 
 .pmf h2
 {
-	font-size: 90%;
-	border-bottom: 1pt solid #883333;
+	border-bottom: 2pt solid #883333;
+}
+
+.pmf section
+{
+	display: none;
+}
+.pmf section:target
+{
+	display: block;
 }
 
 /* Contact page */
