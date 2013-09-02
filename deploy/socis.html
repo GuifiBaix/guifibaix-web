@@ -45,38 +45,28 @@
 </ul>
 </div>
 
-<style>
-.socis
-{
-	position relative;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	text-align: center;
-}
-.socis img
-{
-	max-width: 5em;
-	max-height: 5em;
-	width: 5em;
-}
-.socis ul
-{
-	width: 30%;
-	margin-left: auto;
-	margin-right: auto;
-}
-.socis ul li
-{
-	text-align: left;
-}
-</style>
 <div class='socis'>
-<h2>Àrea de socis</h2>
-<p>Encara estem construint aquesta part de la web.</p>
-<p>Permetrà consultar facturació, estat de la xarxa
-i fer servir serveis com ara:</p>
+
+<form class='login-box'>
+<div class='login-field'>
+	<label for='user' >Soci:</label>
+	<input name='user' size='10' />
+</div>
+<div class='login-field'>
+	<label for='contrasenya'>Contrasenya:</label>
+	<input name='contrasenya' type='password' size='10' />
+</div>
+<div class='login-field'>
+	<input id='enter' type='submit' value='Inicia la sessió' />
+</div>
+</form>
+
+<div class='explicacio'>
+
+<p>Des d'aquí pot accedir a:</p>
 <ul>
+<li>Facturació</li>
+<li>Estat a la xarxa</li>
 <li>Emmagatzament al núvol</li>
 <li>Descàrregues compartides</li>
 <li>Correu electrònic</li>
@@ -84,22 +74,28 @@ i fer servir serveis com ara:</p>
 <li>Hosting de webs</li>
 <li>...</li>
 </ul>
-<p><img
-    src='media/images/owncloud-square-logo.png'
-    title='Emmagatzematge al núvol amb OwnCloud'
-    />
+</div>
+
+<p>
 <img
-    src='media/images/logo-mldonkey.png'
-    title='Descarregues compartides amb mldonkey'
-    />
+	src='media/images/owncloud-square-logo.png'
+	title='Emmagatzematge al núvol amb OwnCloud'
+	/>
 <img
-    src='media/images/logo-xen.png'
-    title='Hosting virtual amb Xen'
-    />
+	src='media/images/logo-mldonkey.png'
+	title='Descarregues compartides amb mldonkey'
+	/>
 <img
-    src='media/images/logo-apache.png'
-    title='Hosting web amb Apache'
-    /></p>
+	src='media/images/logo-xen.png'
+	title='Hosting virtual amb Xen'
+	/>
+<img
+	src='media/images/logo-apache.png'
+	title='Hosting web amb Apache'
+	/>
+</p>
+
+
 </div>
 
 

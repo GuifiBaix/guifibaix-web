@@ -188,7 +188,7 @@ a:hover
 .slider
 {
 	width: 90%;
-	height: 50ex;
+	height: 40ex;
 	margin: 3ex;
 	margin-left: auto;
 	margin-right: auto;
@@ -207,11 +207,13 @@ a:hover
 .slider .slide
 {
 	width: 100%;
-	height: 100%;
 	text-align: right;
+	max-height: 100%;
 	padding: 0;
 	margin: 0;
+	background: #222;
 
+	overflow: hidden;
 	display: none;
 	position: absolute;
 	top: 0;
@@ -229,7 +231,7 @@ a:hover
 {
 	display: block;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	-webkit-border-radius: .5em;
 	   -moz-border-radius: .5em;
 	        border-radius: .5em;
@@ -258,6 +260,12 @@ a:hover
 {
 	left: 3ex;
 	text-align: left;
+}
+
+.slider .slide .slidetext b
+{
+	color: #d55;
+	font-weight: normal;
 }
 
 /* Highlights */
@@ -292,6 +300,7 @@ a:hover
 	max-width: 30.33%;
 	min-width: 25ex;
 	padding: 2px;
+	vertical-align: top;
 }
 .highlights .point:first-child
 {
@@ -307,7 +316,7 @@ a:hover
 {
 	width: 80%;
 	margin: auto;
-	font-size: 150%;
+	font-size: 120%;
 }
 
 .pmf h2
@@ -400,4 +409,65 @@ a:hover
 	color: #ffa;
 }
 
+
+.socis
+{
+	position: relative;
+	text-align: center;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.socis .login-box
+{
+	display: inline-block;
+	max-width: 25%;
+	min-width: 20em;
+	border: 2pt solid #aaa;
+	padding: 1em 2em;
+	margin: 2em 0;
+	text-align: center;
+}
+.socis .login-box .login-field
+{
+	text-align: right;
+	margin: 1ex;
+}
+
+.socis .login-box .login-field label
+{
+	margin: 1em;
+}
+
+.socis .login-box #enter
+{
+	padding: 1ex;
+	margin: 1ex;
+}
+
+.socis .explicacio
+{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0em 2em;
+	min-width: 10em;
+	text-align: left;
+}
+
+.socis img
+{
+	max-width: 5em;
+	max-height: 5em;
+	width: 5em;
+}
+.socis ul
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+.socis ul li
+{
+	text-align: left;
+}
 
