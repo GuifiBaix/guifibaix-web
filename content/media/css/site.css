@@ -231,7 +231,6 @@ form a:visited.close
 	padding: 0;
 	list-style: none;
 	padding-left: 0;
-	display:inline-block;
 	position:relative;
 	text-align: center;
 }
@@ -239,6 +238,7 @@ form a:visited.close
 {
 	position: relative;
 	display: inline-block;
+	*display: inline;
 	margin: 1ex;
 	margin-right: 1%;
 	margin-left: 1%;
