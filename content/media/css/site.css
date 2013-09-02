@@ -238,7 +238,8 @@ form a:visited.close
 {
 	position: relative;
 	display: inline-block;
-	*display: inline;
+	*display: inline; /* ie7 hacks */
+	zoom: 1; /* ie7 hack */
 	margin: 1ex;
 	margin-right: 1%;
 	margin-left: 1%;
