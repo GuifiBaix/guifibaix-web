@@ -1,19 +1,30 @@
 ---
 title: Contacte
 dades:
-    - titol: Connectivitat
+    - id: connectivitat
+      titol: Connectivitat
+      form: Demanar una prova de connectivitat
       pregunta: Vols que saber si t'arriba la Guifi.net?
       resposta: Demana'ns una prova de connectivitat sense compromís.
       imatge: media/images/guifibaix-logo.png
-    - titol: Pressupostos
+
+    - id: pressupost
+      titol: Pressupostos
+      form: Demanar pressupost per una instaŀlació
       pregunta: Vols saber que costaria posar Guifi.net al teu edifici o com a particular?
       resposta: Demana'ns un pressupost per la teva finca.
       imatge: media/images/slide2.jpg
-    - titol: Dubtes
+
+    - id: dubtes
+      titol: Dubtes
+      form: Fer una consulta o demanar una reunió
       pregunta: Vols aclarir dubtes o rebre més informació?
       resposta: Fes-nos una consulta o demana una reunió amb nosaltres.
       imatge: media/images/guifibaix-logo.png
-    - titol: Fes-t'ho tu
+
+    - id: diy
+      titol: Fes-t'ho tu
+      form: Demanar configuració per una instaŀlació independent
       pregunta: Vols muntar-t'ho tu pel teu compte?
       resposta: Pregunta'ns la configuració que has de fer servir.
       imatge: media/images/guifi-logo.png
@@ -26,13 +37,36 @@ dades:
 <a
 	class='item'
 	style="background-image: url('{{item.imatge}}');"
-	href=''
+	href='#{{ item.id }}'
 	>
-	
 	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.pregunta }}</div>
 	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.resposta }}</div>
 </a>
 {% endfor %}
 
+
+{% for item in resource.meta.dades %}
+<div
+	class='contactform'
+	id='{{ item.id }}'
+	>
+<form>
+<a class='close' href='#'>X</a>
+<h2>{{ item.form }}</h2>
+<input name='kind' type='hidden' value='{{ item.id }}'>
+<label>Nom:<input name='nom'></label>
+<label>Cognoms:<input name='cognoms'></label>
+<label>Telèfon de contacte:<input name='telefon' type='phone'></label>
+<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Adreça:<textarea rows=2 cols= 20 name='adreca' type='textarea'></textarea></label>
+<label>Comentari:<textarea rows=4 cols=20 name='commentari' type='textarea'></textarea></label>
+<a href='#'>Canceŀla</a>
+<input type='submit' value='Envia la petició' />
+</form>
 </div>
+</div>
+
+{% endfor %}
+
+
 
