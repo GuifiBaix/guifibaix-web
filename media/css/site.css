@@ -20,8 +20,82 @@ a:active
 }
 a:hover
 {
-	color: #e55;
 }
+
+form
+{
+	background: #555;
+	color: white;
+	border: 3px solid #333;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	-webkit-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	   -moz-box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	        box-shadow: 2px 5px 10px rgba(1,1,0,.7);
+	behavior: url(media/js/libs/PIE.htc);
+}
+
+form input,
+form textarea,
+form a:link,
+form a:visited
+{
+	padding: 1ex;
+	margin-left: 1ex;
+	background: #ddd;
+	color: black;
+	border: 3px solid #333;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	behavior: url(media/js/libs/PIE.htc);
+}
+form a:link,
+form input[type='submit']
+{
+	padding: 1ex 4ex;
+	
+}
+form input[type='submit']
+{
+	background-color: #bcf;
+}
+form input[type='submit']:hover,
+form a:link:hover
+{
+	background-color: #cdf;
+}
+form input:focus,
+form textarea:focus
+{
+	border: 3px solid #88a;
+	background: #eee;
+}
+
+form a:link.close,
+form a:visited.close
+{
+	content: 'X';
+	display: black;
+	background: black;
+	color: white;
+	border: 3pt solid black;
+	font-weight: bold;
+	position: absolute;
+	top: -1.5ex;
+	right: -1.5ex;
+	width: 2ex;
+	height: 2ex;
+	padding: 0.5ex;
+	vertical-align: center;
+	text-align: center;
+	-webkit-border-radius: 3ex;
+	   -moz-border-radius: 3ex;
+	        border-radius: 3ex;
+	behavior: url(media/js/libs/PIE.htc);
+}
+
 
 .figurewide,
 .figureright,
@@ -424,7 +498,6 @@ a:hover
 	display: inline-block;
 	max-width: 25%;
 	min-width: 20em;
-	border: 2pt solid #aaa;
 	padding: 1em 2em;
 	margin: 2em 0;
 	text-align: center;
@@ -469,4 +542,42 @@ a:hover
 .socis ul li
 {
 	text-align: left;
+}
+
+.contactform:target
+{
+	display: block;
+}
+
+.contactform
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #aaa;
+	background: rgba(90,90,90,0.6);
+}
+
+
+
+
+.contactform form
+{
+	position: relative;
+	text-align: right;
+	top: 6ex;
+	min-width: 20em;
+	max-width: 36em;
+	padding: 2ex 4ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contactform label
+{
+	display:block;
+	padding: 1ex;
 }
