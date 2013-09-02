@@ -1,7 +1,47 @@
 ---
 title: Informació
+dades:
+    - id: guifibaix
+      imatge: media/images/guifibaix-logo.png
+      titol: El projecte GuifiBaix
+      subtitol: qui som, com funcionem...
+    - id: guifinet
+      imatge: media/images/guifi-logo.png
+      titol: La xarxa guifi.net
+      subtitol: què és, què hi puc trobar...
+    - id: internet
+      titol: Internet compartit
+      imatge: media/images/slide2.jpg
+      subtitol: com accedeixo a internet amb GuifiBaix
+    - id: telefon
+      titol: Telefonia IP
+      imatge: media/images/slide2.jpg
+      subtitol: com tenir telèfon amb GuifiBaix
+    - id: serveis
+      imatge: media/images/slide-serveis.png
+      titol: Serveis
+      subtitol: 'quins serveis oferim: instaŀlació, manteniment, extres...'
+    - id: salutlleis
+      imatge: media/images/slide-serveis.png
+      titol: Salut i legalitat
+      subtitol: aspectes legals i de salut
 ---
+<div class='contact'>
+{% for item in resource.meta.dades %}
+<a
+	class='item'
+	style="background-image: url('{{item.imatge}}');"
+	href='#{{ item.id }}'
+	>
+	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
+	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
+</a>
+{% endfor %}
+</div>
+
 <div class='pmf'>
+
+<section id='guifibaix'>
 {% markdown %}
 
 ## Què és GuifiBaix?
@@ -16,6 +56,85 @@ amb els usuaris, els treballadors i la societat.
 
 <img src='media/images/guifi-logo.png' class='figureright' />
 Ho volem fer connectant els veïns i veines a la xarxa ciutadana guifi.net.
+
+## D'on sorgeix GuifiBaix?
+ 
+<a href='http://desconexionibex35.org'
+	class='figureright'
+	title='Logo de la campanya Desconexion IBEX35'
+	>
+<img src='media/images/desconexionibex35-logo.png'
+	title='Logo de la campanya Desconexion IBEX35'
+	width='100%'
+	/>
+</a>
+GuifiBaix és una iniciativa nascuda de la campanya
+[Desconnexió de l'IBEX35](http://desconexionibex35.org)
+del [15M de Sant Joan Despí](http://acampadadespi.org).
+L'objectiu de la campanya és posar a l'abast dels ciutadans
+la informació i els mitjans per deixar d'engreixar a les
+grans empreses oligopolístiques que controlen l'estat.
+Banca, electricitat, medis, assegurances, alimentació, informàtica...
+
+En el cas de Guifi.net per les telecomunicacions,
+vam veure que el salt dels usuaris finals no era tan senzill
+com podia ser, per exemple, [SomEnergia](http://somenergia.coop)
+per la electricitat, i que calia un actor local,
+com n'hi ha a d'altres indrets on Guifi.net funciona bé,
+que en fes les instaŀlacions, el manteniment,
+i reduís la complexitat de tot plegat.
+
+
+## Què fa GuifiBaix?
+
+GuifiBaix facilita que qualsevol persona,
+encara que no tingui els coneixements tècnics necessaris,
+o temps per dedicar-hi,
+pugui participar de la xarxa Guifi.net.
+
+Ofereix a les comunitats de veïns solucions a punt per endollar i funcionar,
+incloent el cablejat de l'edifici i la configuració dels aparells de xarxa.
+Manté i coordina la xarxa de la zona, repartint el fluxe de dades,
+i oferint serveis convenients als usuaris.
+
+
+## Perquè GuifiBaix és una alternativa ètica amb els treballadors?
+
+Per garantir unes condicions justes als treballadors,
+ens organitzem sota principis cooperatius i d'economia social.
+Els treballadors tenim el control de les nostres condicions de treball.
+
+## Perquè GuifiBaix és una alternativa ètica amb els usuaris?
+
+Per garantir un tracte just als usuaris, el primer és donar-los llibertat.
+No volem usuaris lligats.
+La infraestructura que instaŀlem pertany als usuaris,
+està basada en estàndards oberts y està ben documentada.
+Si ens tornem malèvols, els usuaris tenen dret a cercar
+una fórmula empresarial o a base de voluntaris que ens substitueixi.
+A més, promovem l'auto-organització i formació
+d'usuaris perque puguin pendre decissions
+al voltant de l'evolució de la xarxa.
+
+
+## Quina és la forma jurídica de GuifiBaix?
+
+<img src='media/images/logo-at2.jpeg' class='figureright' title="Logo d'AT2, la incuvadora de projectes" />
+GuifiBaix està, de moment,
+a una incubadora de projectes d'economia social, anomenada AT2,
+i encara no té forma jurídica pròpia.
+Durant el periode d'incubació és AT2
+qui factura i fa els contractes amb treballadors i usuaris.
+La incubadora ens dòna temps, fins a mitjans del 2014,
+per avaluar com funciona el projecte
+abans de decidir quina és la forma jurídica més adient
+i de quina manera s'integren els usuaris,
+fent-los socis o muntant una associació paraŀlela, per exemple.
+
+{% endmarkdown %}
+</section>
+<section id='guifinet'>
+{% markdown %}
 
 ## Què és guifi.net?
 
@@ -108,78 +227,10 @@ emisores de ràdio i televisió online,
 e-mail, hosting web, intranets, servidors de noms,
 servidors de jocs online...
 
-
-
-## D'on sorgeix GuifiBaix?
- 
-<a href='http://desconexionibex35.org'
-	class='figureright'
-	title='Logo de la campanya Desconexion IBEX35'
-	>
-<img src='media/images/desconexionibex35-logo.png'
-	title='Logo de la campanya Desconexion IBEX35'
-	width='100%'
-	/>
-</a>
-GuifiBaix és una iniciativa nascuda de la campanya
-[Desconnexió de l'IBEX35](http://desconexionibex35.org)
-del [15M de Sant Joan Despí](http://acampadadespi.org).
-L'objectiu de la campanya és posar a l'abast dels ciutadans
-la informació i els mitjans per deixar d'engreixar a les
-grans empreses oligopolístiques que controlen l'estat.
-Banca, electricitat, medis, assegurances, alimentació, informàtica...
-
-En el cas de Guifi.net per les telecomunicacions,
-vam veure que no era una alternativa tan senzilla de fer el salt
-pel public en general, com ara [SomEnergia](http://somenergia.coop)
-per la electricitat, i que calia un actor local,
-com n'hi ha a d'altres indrets on Guifi.net funciona bé.
-que en fes les instaŀlacions, el manteniment,
-i reduís la complexitat de tot plegat.
-
-
-## Què fa GuifiBaix?
-
-GuifiBaix facilita que els participants de guifi.net que no tinguin
-coneixements tècnics per muntar un node
-també puguin incorporar-se a la xarxa.
-Ofereix a les comunitats de veïns solucions a punt per fer funcionar.
-Manté i coordina la xarxa de la zona, repartint el fluxe de dades,
-i oferint serveis convenients als usuaris.
-
-
-## Perquè GuifiBaix és una alternativa ètica amb els treballadors?
-
-Per garantir unes condicions justes als treballadors,
-ens organitzem sota principis cooperatius i d'economia social.
-Els treballadors tenim el control de les nostres condicions de treball.
-
-## Perquè GuifiBaix és una alternativa ètica amb els usuaris?
-
-Per garantir un tracte just als usuaris, el primer és donar-los llibertat.
-No volem usuaris lligats.
-La infraestructura que instaŀlem pertany als usuaris,
-està basada en estàndards oberts y està ben documentada.
-Si ens tornem malèvols, els usuaris tenen dret a cercar
-una fórmula empresarial o a base de voluntaris que ens substitueixi.
-A més, promovem l'auto-organització i formació
-d'usuaris perque puguin pendre decissions
-al voltant de l'evolució de la xarxa.
-
-
-## Quina és la forma jurídica de GuifiBaix?
-
-<img src='media/images/logo-at2.jpeg' class='figureright' title="Logo d'AT2, la incuvadora de projectes" />
-GuifiBaix està, de moment,
-a una incubadora de projectes d'economia social, anomenada AT2,
-i encara no té forma jurídica pròpia.
-Durant el periode d'incubació és AT2
-qui factura i fa els contractes amb treballadors i usuaris.
-La incubadora ens dòna temps, fins a mitjans del 2014,
-per avaluar com funciona el projecte
-abans de decidir quina és la forma jurídica més adient
-i de quina manera s'integren els usuaris,
-fent-los socis o muntant una associació paraŀlela, per exemple.
+{% endmarkdown %}
+</section>
+<section id='internet'>
+{% markdown %}
 
 
 ## Puc tenir internet amb guifi.net?
@@ -214,6 +265,11 @@ Si ens estenem a zones amb fibra òptica, ho sumem i podrem anar prescindint d'A
 La situació ideal a la llarga seria trobar un proveidor de fibra òptica extern
 que ens ofereixi cabdal suficient a preu de majorista.
 
+
+{% endmarkdown %}
+</section>
+<section id='telefon'>
+{% markdown %}
 
 ## Puc tenir telefonia fixa amb guifi.net?
 
@@ -267,6 +323,10 @@ Un altre detall beneficiós és que
 els telèfons IP permeten fer trucades gratis directes
 entre usuaris de guifi.net sense passar per cap operador.
 
+{% endmarkdown %}
+</section>
+<section id='serveis'>
+{% markdown %}
 
 ## Quin és l'estat de la xarxa guifi.net a Sant Joan Despí?
 
@@ -342,6 +402,11 @@ ens agradaria recomprar-los, a un preu adient a la seva amortització i estat.
 GuifiBaix en cap cas està obligat a la recompra
 però ho volem potenciar amb l'objectiu de reduir l'escombreria electrònica
 si els equips es poguèssin reutilitzar a d'altres instaŀlacions.
+
+{% endmarkdown %}
+</section>
+<section id='salutlleis'>
+{% markdown %}
 
 
 ## Són perilloses per la salut les antenes que poseu?
@@ -429,9 +494,8 @@ no ha d'haver ànim de lucre i estar limitat als usuaris que en formen part.
 * El blog de la CMT: http://blogcmt.com/2010/09/14/vecinos-que-comparten-wifi/
 * La resolucion: http://www.localret.cat/serveis/ambit-juridic/docs/sensefils/ro_2009_630
 
-
-
 {% endmarkdown %}
+</section>
 
 </div>
 
