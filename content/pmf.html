@@ -44,6 +44,8 @@ dades:
 <section id='guifibaix'>
 {% markdown %}
 
+# El projecte GuifiBaix
+
 ## Què és GuifiBaix?
 
 <img src='media/images/guifibaix-logo.png' class='figureright' />
@@ -55,7 +57,8 @@ i de les seves pràctiques abusives
 amb els usuaris, els treballadors i la societat.
 
 <img src='media/images/guifi-logo.png' class='figureright' />
-Ho volem fer connectant els veïns i veines a la xarxa ciutadana guifi.net.
+Ho volem fer connectant els veïns i veines a la xarxa ciutadana guifi.net
+per donar resposta a les seves necessitats de telefonia fixa i Internet.
 
 ## D'on sorgeix GuifiBaix?
  
@@ -87,10 +90,10 @@ i reduís la complexitat de tot plegat.
 
 ## Què fa GuifiBaix?
 
-GuifiBaix facilita que qualsevol persona,
+GuifiBaix facilita que qualsevol persona
+pugui participar de la xarxa Guifi.net,
 encara que no tingui els coneixements tècnics necessaris,
-o temps per dedicar-hi,
-pugui participar de la xarxa Guifi.net.
+o no tingui temps per dedicar-s'hi.
 
 Ofereix a les comunitats de veïns solucions a punt per endollar i funcionar,
 incloent el cablejat de l'edifici i la configuració dels aparells de xarxa.
@@ -102,7 +105,8 @@ i oferint serveis convenients als usuaris.
 
 Per garantir unes condicions justes als treballadors,
 ens organitzem sota principis cooperatius i d'economia social.
-Els treballadors tenim el control de les nostres condicions de treball.
+Els treballadors de GuifiBaix tenim el control
+de les nostres condicions de treball.
 
 ## Perquè GuifiBaix és una alternativa ètica amb els usuaris?
 
@@ -165,6 +169,30 @@ enllaços de fibra òptica
 en comptes dels Wi-Fi.
 
 
+## Què puc trobar a guifi.net?
+
+<img
+	class='figureright'
+	title='OwnCloud: Penjar arxius al núvol a velocitats de xarxa local.'
+	src='media/images/owncloud-square-logo.png'
+	width='100%'
+	/>
+Els participants de la xarxa comparteixen recursos i serveis.
+El més popular és la connectivitat a internet
+(compartir els ADSL's),
+però també hi ha d'altres serveis interns de la xarxa
+que van a altes velocitats, perque no han de sortir per cap ADSL.
+
+Alguns exemples són
+la telefonia IP,
+l'enmagatzament i compartició de fitxers al núvol,
+els serveis de video-conferència,
+les descàrregues compartides,
+emisores de ràdio i televisió online,
+e-mail, hosting web, intranets, servidors de noms,
+servidors de jocs online...
+
+
 ## Quí fa servir guifi.net?
 
 <a href='media/images/guifinet-cobertura-peninsula.png'
@@ -193,6 +221,8 @@ ha facilitat antenes secundàries a unes 50 famílies.
 No dona gaire de sí perquè son una illa sense connectar
 a la resta de la xarxa i només comparteixen un ADSL.
 
+## I a Sant Joan Despí, com estem?
+
 <a href='media/images/guifinet-cobertura-santjoandespi.png'
 	class='figureright fancybox'
 	title='Cobertura de guifi.net a Sant Joan Despí'
@@ -200,32 +230,33 @@ a la resta de la xarxa i només comparteixen un ADSL.
 <img src='media/images/guifinet-cobertura-santjoandespi.png' width='100%' />
 </a>
 A Sant Joan, fa anys que la AAVV de l'Eixample va fer un desplegament al barri
-on una desena de famílies i la pròpia associació comparteixen 2 ADSL's.
-L'any passat vam deixar de ser una illa connectant-nos a la resta de Guifi.net.
+on una desena de famílies i el local de l'associació comparteixen 2 ADSL's.
+L'any passat vam deixar de ser una illa connectant-nos a la resta de Guifi.net
+establint un enllaç a Santa Coloma de Cervelló.
 Ara, amb GuifiBaix, estem estenent la xarxa al centre, Les Planes i TV3.
 
 
-## Què puc trobar a guifi.net?
-
-Els participants de la xarxa comparteixen recursos i serveis.
-El més popular és la connectivitat a internet
-(compartir els ADSL's),
-però també hi ha d'altres serveis interns de la xarxa
-que van a altes velocitats, perque no han de sortir per cap ADSL.
+## Quin sistema fem servir a Sant Joan Despí?
 
 <img
 	class='figureright'
-	title='OwnCloud: Penjar arxius al núvol a velocitats de xarxa local.'
-	src='media/images/owncloud-square-logo.png'
-	width='100%' />
-Alguns exemples són
-la telefonia IP,
-l'enmagatzament i compartició de fitxers al núvol,
-els serveis de video-conferència,
-les descàrregues compartides,
-emisores de ràdio i televisió online,
-e-mail, hosting web, intranets, servidors de noms,
-servidors de jocs online...
+	title='qmp, el sistema que posem a les antenes.'
+	src='media/images/logo-qmp.png'
+	width='100%'
+	/>
+A Sant Joan Despí,
+som pioners pel sistema que fem servir a les antenes, el [qmp](http://qmp.cat).
+Al guifi.net tradicional, es posen un seguit de nodes centrals
+que es comuniquen entre ells formant la xarxa troncal,
+i les antenes dels usuaris es connecten a aquests 'super nodes'.
+Fent servir qmp, en canvi, no hi ha jerarquies,
+cada antena d'usuari es pot connectar amb qualsevol
+altre antena d'usuari.
+Cada edifici afegit és un posible camí per les dades.
+Això fa sigui molt fàcil donar cobertura a noves arees i
+els camins alternatius fan que la xarxa sigui més flexible i tolerant a fallades i a saturació.
+
+
 
 {% endmarkdown %}
 </section>
@@ -328,26 +359,6 @@ entre usuaris de guifi.net sense passar per cap operador.
 <section id='serveis'>
 {% markdown %}
 
-## Quin és l'estat de la xarxa guifi.net a Sant Joan Despí?
-
-A Sant Joan Despí som pioners pel [sistema](http://qmp.cat) que fem servir a guifi.net.
-En comptes de fer servir nodes centrals als que apunten els usuaris finals,
-cada edifici afegit és un posible camí per les dades.
-Això fa sigui molt fàcil donar cobertura a noves arees i
-els camins alternatius fan que la xarxa sigui més flexible i tolerant a fallades i a saturació.
-
-La xarxa al poble va començar a la zona de l'Eixample,
-impulsada per la AAVV del barri,
-amb una xarxa que donava cobertura a 10 families
-saltant de balconada a balconada i que compartien 2 ADSL's.
-Entre els anys 2011 i 2013 hem expandit la xarxa al barri centre
-i properament a arribarem a Les Planes i TV3.
-
-La xarxa de Sant Joan ha estat, fins fa poc, una illa i no estava connectada
-a la resta de guifi.net.
-Des del 2012 esta connectada mitjantçant un node a Santa Coloma de Cervellò.
-
-
 ## Quin tipus d'instaŀlació fa GuifiBaix?
 
 GuifiBaix fa principalment instaŀlacions a comunitats de veïns.
@@ -409,29 +420,30 @@ si els equips es poguèssin reutilitzar a d'altres instaŀlacions.
 {% markdown %}
 
 
-## Són perilloses per la salut les antenes que poseu?
+## Tenen efectes per la salut les antenes que poseu?
 
-La perillositat de les ones electromagnètiques no ionitzants
-(llum visible, ràdio, televisió, telefonia mòbil, wifi, wimax...)
-és un tema científicament controvertit.
-És complicat fer un estudi complert a llarg termini aillant altres variables.
+Científicament no està aclarida la perillositat o no de les
+ones electromagnètiques no ionitzants
+(llum visible, ràdio, televisió, telefonia mòbil, wifi, wimax...).
+És complicat fer un estudi complert a llarg termini i
+aillant altres variables.
 
 Sí que hi ha consens en que, en cas de que sigui perillós,
-el perill dependrà de coses com ara 
-la distància i el temps d'exposició,
-la potència rebuda, i la freqüència de les ones.
-Exposicións prolongades a curta distància i de molta alta potència
-(com ara radars) sí que han tingut efectes nocius demostrats.
+el perill dependrà de factors com ara 
+la **distància** i el **temps d'exposició**,
+la **potència** emesa, i la **freqüència** de les ones.
+Quan aquests factors han estat extrems, s'han vist 
 
 Tenint en compte això, cal dir que,
-les emisions de les nostres antenes estan ordres de magnitud per sota en potència
-de les emisions que pot fer, per exemple, un mòbil,
-que a més, normalment portem pegat al cos.
+les nostres antenes emiteixen ordres de magnitud per sota en potència
+de les emisions que poden fer els mòbils,
+que tothom portem tota l'estona pegats al cos.
+A mès estan direccionades enfocant a les altres antenes.
 
-Per que et facis una idea:
+Per fer-se una idea:
 Les grans antenes de telefonia mòbil que es posen als terrats
 tènen potència per creuar murs
-i donar-te cobertura, per exemple, en un sòtan,
+i donar cobertura, per exemple, a un sòtan,
 estant l'antena dos i tres carrers enllà.
 És més, els mòbils que tenim a les butxaques contesten
 emetent amb prou potència per fer el camí de tornada.
@@ -442,7 +454,19 @@ A la que poses un obstacle entremig, un arbre o una paret, la senyal desapareix.
 
 Les antenes de guifi.net que més potència tenen són les que conecten poblacions entre sí.
 El mateix tècnic de la campanya contra les antenes de telefonia a Matarò,
-va certificar com a no riscoses les emissions d'una d'aquestes antenes 'grans'.
+va certificar com a no riscoses les emissions a sota d'una d'aquestes antenes 'grans'.
+
+
+## En tot cas quines preucacions cal prendre?
+
+Si instaŀleu les antenes vosaltres, per curar-vos en salut,
+igual que fem nosaltres, teniu cura de:
+
+- Fer servir la potència mínima que funcioni
+- Posar les antenes el més alt posibles
+- No enfocar el lòbul principal d'emissions, 60ºx60º, a puestos que hi hagin persones a prop.
+- Si penseu que coincideix amb una d'aquestes zones podeu apantallar la zona.
+- Tenir les antenes a fora és més segur que tenir-les a casa: per distribuir Internet al vostre domicili des del punt de connexió, abans de fer servir Wi-Fi considereu fer servir cablejat o PLC, i si feu servir Wi-Fi, desactiveu-la quan no la feu servir.
 
 
 ## Puc instaŀlar-ho si els meus veïns no ho volen?
