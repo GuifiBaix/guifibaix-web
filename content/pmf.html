@@ -22,23 +22,10 @@ dades:
       titol: Serveis
       subtitol: 'quins serveis oferim: instaŀlació, manteniment, extres...'
     - id: salutlleis
-      imatge: media/images/slide-serveis.png
-      titol: Salut i legalitat
+      imatge: media/images/salutlleis.png
+      titol: Salut i context legal
       subtitol: aspectes legals i de salut
 ---
-<div class='contact'>
-{% for item in resource.meta.dades %}
-<a
-	class='item'
-	style="background-image: url('{{item.imatge}}');"
-	href='#{{ item.id }}'
-	>
-	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
-	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
-</a>
-{% endfor %}
-</div>
-
 <div class='pmf'>
 
 <section id='guifibaix'>
@@ -139,6 +126,8 @@ fent-los socis o muntant una associació paraŀlela, per exemple.
 </section>
 <section id='guifinet'>
 {% markdown %}
+
+# La Xarxa Guifi.net
 
 ## Què és guifi.net?
 
@@ -245,16 +234,17 @@ Ara, amb GuifiBaix, estem estenent la xarxa al centre, Les Planes i TV3.
 	width='100%'
 	/>
 A Sant Joan Despí,
-som pioners pel sistema que fem servir a les antenes, el [qmp](http://qmp.cat).
-Al guifi.net tradicional, es posen un seguit de nodes centrals
-que es comuniquen entre ells formant la xarxa troncal,
-i les antenes dels usuaris es connecten a aquests 'super nodes'.
-Fent servir qmp, en canvi, no hi ha jerarquies,
-cada antena d'usuari es pot connectar amb qualsevol
-altre antena d'usuari.
-Cada edifici afegit és un posible camí per les dades.
-Això fa sigui molt fàcil donar cobertura a noves arees i
-els camins alternatius fan que la xarxa sigui més flexible i tolerant a fallades i a saturació.
+som pioners en l'ús del sistema [qmp](http://qmp.cat) a les antenes.
+Fins fa poc la xarxa guifi.net estava basada en dos nivells,
+els super-nodes que formaven la xarxa troncal
+i els nodes simples que enllaçaven els usuaris amb els super-nodes.
+
+Amb qmp no hi ha jerarquies.
+Qualsevol node es pot connectar amb qualsevol altre.
+Cada edifici afegit es un nou camí possible per les dades.
+Això fa molt fàcil donar cobertura a noves arees
+al mateix temps que permet camins reduntants
+que fan la xarxa més flexible i tolerant a falles o saturacions.
 
 
 
@@ -263,6 +253,7 @@ els camins alternatius fan que la xarxa sigui més flexible i tolerant a fallade
 <section id='internet'>
 {% markdown %}
 
+# Accés a Internet
 
 ## Puc tenir internet amb guifi.net?
 
@@ -301,6 +292,8 @@ que ens ofereixi cabdal suficient a preu de majorista.
 </section>
 <section id='telefon'>
 {% markdown %}
+
+# Telefonia IP
 
 ## Puc tenir telefonia fixa amb guifi.net?
 
@@ -358,6 +351,8 @@ entre usuaris de guifi.net sense passar per cap operador.
 </section>
 <section id='serveis'>
 {% markdown %}
+
+# Serveis que oferim
 
 ## Quin tipus d'instaŀlació fa GuifiBaix?
 
@@ -419,14 +414,14 @@ si els equips es poguèssin reutilitzar a d'altres instaŀlacions.
 <section id='salutlleis'>
 {% markdown %}
 
+# Salut i context legal
 
 ## Tenen efectes per la salut les antenes que poseu?
 
-Científicament no està aclarida la perillositat o no de les
+Donada la dificultat de fer un estudi a llarg termini i aïllant altres variables,
+científicament no està aclarida la perillositat o no de les
 ones electromagnètiques no ionitzants
 (llum visible, ràdio, televisió, telefonia mòbil, wifi, wimax...).
-És complicat fer un estudi complert a llarg termini i
-aillant altres variables.
 
 Sí que hi ha consens en que, en cas de que sigui perillós,
 el perill dependrà de factors com ara 
@@ -521,5 +516,18 @@ no ha d'haver ànim de lucre i estar limitat als usuaris que en formen part.
 {% endmarkdown %}
 </section>
 
+</div>
+
+<div class='contact'>
+{% for item in resource.meta.dades %}
+<a
+	class='item'
+	style="background-image: url('{{item.imatge}}');"
+	href='#{{ item.id }}'
+	>
+	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
+	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
+</a>
+{% endfor %}
 </div>
 
