@@ -25,7 +25,6 @@ a:hover
 .socis form:before,
 .contactform form:before
 {
-	postion: relative;
 	color: #d44;
 	font-weight: bold;
 	text-align: center;
@@ -437,7 +436,6 @@ form a:visited.close
 .pmf section:target ~ .cards
 {
 	width: 25%;
-	border: 1pt solid red;
 	margin: 0;
 }
 
@@ -448,7 +446,6 @@ form a:visited.close
 	width: 66%;
 	margin-left: 3%;
 	margin-right: 3%;
-	border: 1pt solid green;
 }
 .pmf section:target
 {
