@@ -28,6 +28,7 @@ dades:
 ---
 <div class='pmf'>
 
+
 <section id='guifibaix'>
 {% markdown %}
 
@@ -47,7 +48,7 @@ amb els usuaris, els treballadors i la societat.
 Ho volem fer connectant els veïns i veines a la xarxa ciutadana guifi.net
 per donar resposta a les seves necessitats de telefonia fixa i Internet.
 
-## D'on sorgeix GuifiBaix?
+## D'on surt GuifiBaix?
  
 <a href='http://desconexionibex35.org'
 	class='figureright'
@@ -414,7 +415,7 @@ si els equips es poguèssin reutilitzar a d'altres instaŀlacions.
 <section id='salutlleis'>
 {% markdown %}
 
-# Salut i context legal
+# Salut i aspectes legals
 
 ## Tenen efectes per la salut les antenes que poseu?
 
@@ -427,7 +428,7 @@ Sí que hi ha consens en que, en cas de que sigui perillós,
 el perill dependrà de factors com ara 
 la **distància** i el **temps d'exposició**,
 la **potència** emesa, i la **freqüència** de les ones.
-Quan aquests factors han estat extrems, s'han vist 
+Hi ha evidència d'efectes nocius quan aquests factors han estat extrems.
 
 Tenint en compte això, cal dir que,
 les nostres antenes emiteixen ordres de magnitud per sota en potència
@@ -447,8 +448,9 @@ Les nostres antenes emeteixen tan poca potència
 que necessiten tenir visió directa entre elles.
 A la que poses un obstacle entremig, un arbre o una paret, la senyal desapareix.
 
-Les antenes de guifi.net que més potència tenen són les que conecten poblacions entre sí.
-El mateix tècnic de la campanya contra les antenes de telefonia a Matarò,
+Les antenes de guifi.net que més potència tenen
+són les que conecten poblacions entre sí.
+El tècnic de la campanya contra les antenes de telefonia a Matarò,
 va certificar com a no riscoses les emissions a sota d'una d'aquestes antenes 'grans'.
 
 
@@ -458,8 +460,8 @@ Si instaŀleu les antenes vosaltres, per curar-vos en salut,
 igual que fem nosaltres, teniu cura de:
 
 - Fer servir la potència mínima que funcioni
-- Posar les antenes el més alt posibles
-- No enfocar el lòbul principal d'emissions, 60ºx60º, a puestos que hi hagin persones a prop.
+- Posar les antenes el més alt possible
+- No enfocar el lòbul principal d'emissions, 60ºx60º, a llocs que hi hagin persones a prop.
 - Si penseu que coincideix amb una d'aquestes zones podeu apantallar la zona.
 - Tenir les antenes a fora és més segur que tenir-les a casa: per distribuir Internet al vostre domicili des del punt de connexió, abans de fer servir Wi-Fi considereu fer servir cablejat o PLC, i si feu servir Wi-Fi, desactiveu-la quan no la feu servir.
 
@@ -516,18 +518,20 @@ no ha d'haver ànim de lucre i estar limitat als usuaris que en formen part.
 {% endmarkdown %}
 </section>
 
-</div>
-
-<div class='contact'>
-{% for item in resource.meta.dades %}
+<div class='cards'>
+{% for card in resource.meta.dades %}
 <a
-	class='item'
-	style="background-image: url('{{item.imatge}}');"
-	href='#{{ item.id }}'
+	class='card'
+	style="background-image: url('{{card.imatge}}');"
+	href='#{{ card.id }}'
 	>
-	<div class='pregunta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
-	<div class='resposta'><h2>{{ item.titol }}</h2>{{ item.subtitol }}</div>
+	<div class='pregunta'><h2>{{ card.titol }}</h2>{{ card.subtitol }}</div>
+	<div class='resposta'><h2>{{ card.titol }}</h2>{{ card.subtitol }}</div>
 </a>
 {% endfor %}
+</div>
+
+
+
 </div>
 

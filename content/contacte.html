@@ -31,9 +31,10 @@ dades:
 
 ---
 <div class='contact'>
+<div class='cards'>
 {% for item in resource.meta.dades %}
 <a
-	class='item'
+	class='card'
 	style="background-image: url('{{item.imatge}}');"
 	href='#{{ item.id }}'
 	>
