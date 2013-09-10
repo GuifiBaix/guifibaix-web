@@ -23,7 +23,7 @@ a:hover
 }
 
 /* For the forms not working yet. */
-.socis form:before,
+.socis form:before
 {
 	color: #d44;
 	font-weight: bold;
