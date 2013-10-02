@@ -19,7 +19,7 @@ To publish on github.io use:
 
 	./publish.sh
 
-To publish on http://guifibaix.coop:_
+To publish on http://guifibaix.coop:
 
 	./production.sh
 
