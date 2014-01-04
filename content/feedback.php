@@ -4,7 +4,7 @@ extends: false
 <?php
 
 $debug = 0;
-$from_address = "webmaster@noreply.net";
+$from_address = "noreply@guifibaix.coop";
 // split address in two to avoid mail being scanned by robots
 $to_user  = "equipo";
 $to_domain = "guifibaix.coop";
