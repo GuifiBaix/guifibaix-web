@@ -8,7 +8,7 @@ $from_address = "webmaster@noreply.net";
 // split address in two to avoid mail being scanned by robots
 $to_user  = "equipo";
 $to_domain = "guifibaix.coop";
-$to_address = "$to_user@$to_domain"
+$to_address = "$to_user@$to_domain";
 $subject = "[GuifiBaix feedback] from ";
 
 $debug and ini_set('display_errors', 'On');
