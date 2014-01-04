@@ -46,6 +46,8 @@ meta:
     motto: >
         Facilitant que els veïns del Baix Llobregat
         es desempalleguin de les grans telecos.
+    analytics:
+        id: UA-44683654-1
 sorter:
     time:
         attr:
