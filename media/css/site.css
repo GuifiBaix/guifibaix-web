@@ -588,6 +588,11 @@ form a:visited.close
 	text-align: left;
 }
 
+.socis .logos
+{
+	vertical-align: middle;
+}
+
 .socis img
 {
 	max-width: 5em;
