@@ -28,6 +28,30 @@ dades:
       pregunta: Vols muntar-t'ho tu pel teu compte?
       resposta: Pregunta'ns la configuració que has de fer servir.
       imatge: media/images/diy.png
+municipis:
+  - group: Amb xarxa Guifibaix
+    municipis:
+      sjd: Sant Joan Despí
+      prll: El Prat de Llobregat
+      crnll: Cornellà de Llobregat
+      edll: Esplugues de Llobregat
+      vldc: Viladecans
+      scll: Sant Climent de Llobregat
+      scc: Santa Coloma de Cervelló
+  - group: En prospecció
+    municipis:
+      tdll: Torrelles de Llobregat
+      sbdl: Sant Boi de Llobregat
+      sfdl: Sant Feliu de Llobregat
+      svdh: Sant Vicenç dels Horts
+  - group: No iniciats
+    municipis:
+      sjud: Sant Just Desvern
+      kstf: Castelldefels
+      mdr: Molins de Rei
+      ppl: El Papiol
+      gava: Gava
+      sadb: Sant Andreu de la Barca
 
 ---
 <div class='contact'>
@@ -56,10 +80,23 @@ dades:
 <input name='yuemail' type='email' value='' style='display: none'>
 <label>Nom:<input name='nom'></label>
 <label>Cognoms:<input name='cognoms'></label>
-<label>Telèfon de contacte:<input name='telefon' type='phone'></label>
+<label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
 <label>Correu electrònic:<input name='email' type='email'></label>
-<label>Adreça:<textarea rows='2' name='adreca' type='textarea'></textarea></label>
-<label>Comentari:<textarea rows='4' name='comentari' type='textarea'></textarea></label>
+<label>Municipi:<select required name='municipi'>
+	<option selected value=''>Selecciona municipi</option>
+{% for group in resource.meta.municipis %}
+	<optgroup label='{{group.group}}' >
+{% for municipi in group.municipis|sort %}
+	<option value='{{ municipi[0] }}'>{{ municipi[1] }}</option>
+{% endfor %}
+	</optgroup>
+{% endfor %}
+	<option value='baix'>Altre municipi del Baix Llobregat</option>
+	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	</select>
+</label>
+<label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>
+<label>Comentari:<textarea rows='4' name='comentari' ></textarea></label>
 <a href='#'>Canceŀla</a>
 <input type='submit' value='Envia la petició' />
 </form>
