@@ -30,9 +30,10 @@ a:hover
 	text-align: center;
 	content: 'No està operatiu encara';
 	position: relative;
-	width: 100%;
-	padding: 1ex;
-	margin: 1ex;
+	display: block;
+	width: 96%;
+	padding: 2%;
+	margin: 0;
 	background: white;
 	-webkit-border-radius: .5em;
 	   -moz-border-radius: .5em;
@@ -59,6 +60,7 @@ form
 
 form input,
 form textarea,
+form select,
 form a:link,
 form a:visited
 {
@@ -71,9 +73,6 @@ form a:visited
 	   -moz-border-radius: .5em;
 	        border-radius: .5em;
 	behavior: url(media/js/libs/PIE.htc);
-}
-form textarea
-{
 	width: 20em;
 }
 form a:link,
@@ -92,7 +91,8 @@ form a:hover
 	background-color: #cdf;
 }
 form input:focus,
-form textarea:focus
+form textarea:focus,
+form select:focus
 {
 	border: 3px solid #88a;
 	background: #eee;
@@ -562,6 +562,9 @@ form a:visited.close
 	margin: 2em 0;
 	text-align: center;
 }
+form.login-box input {
+	width: 8em;
+}
 .socis .login-box .login-field
 {
 	text-align: right;
@@ -581,6 +584,7 @@ form a:visited.close
 
 .socis .explicacio
 {
+	margin: 2em 0;
 	display: inline-block;
 	vertical-align: top;
 	padding: 0em 2em;
