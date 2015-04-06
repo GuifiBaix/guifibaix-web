@@ -50,9 +50,6 @@ function post($field, $default=Null)
 }
 
 date_default_timezone_set("UTC");
-$time = date("Y-m-d H:i:s");
-$slug_time = date("Ymd-His");
-$title_excerpt_size=20;
 $random_hash = md5(rand());
 
 try
@@ -62,6 +59,7 @@ try
 	$cognoms = post('cognoms');
 	$telefon = post('telefon');
 	$email = post('email');
+	$municipi = post('municipi');
 	$adreca = post('adreca');
 	$comentari = post('comentari');
 
@@ -98,6 +96,24 @@ if ($debug)
 	echo '</pre>';
 }
 
+$yaml_file= <<<EOF
+name: $nom
+familyname: $cognoms
+type: $kind
+contact:
+  phone:
+  - $telefon
+  email:
+  - $email
+address: $adreca
+city: $municipi
+content: <
+$comentari
+log:
+- $isodate [webform] Contacted through the $kind webform
+
+EOF;
+
 $message = <<<EOF
 --Multipart-boundary-$random_hash
 Content-Type: text/plain; charset="utf-8
@@ -116,6 +132,11 @@ Content:
 $comentari
 ------------------
 
+--Multipart-boundary-$random_hash
+Content-Type: text/yaml; name="$id.yaml"; charset="utf-8"
+Content-Disposition: attachment
+
+$yaml_file
 EOF;
 
 if (! $debug )
