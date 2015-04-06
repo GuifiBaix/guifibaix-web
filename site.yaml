@@ -48,6 +48,8 @@ meta:
         es desempalleguin de les grans telecos.
     analytics:
         id: UA-44683654-1
+    feedback:
+        url: feedback.php
 sorter:
     time:
         attr:
