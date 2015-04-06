@@ -81,7 +81,7 @@ ga('send', 'pageview');
 	href='#dubtes'
 	>
 	<div class='pregunta'><h2>Dubtes</h2>Vols aclarir dubtes o rebre més informació?</div>
-	<div class='resposta'><h2>Dubtes</h2>Fes-nos una consulta o demana una reunió amb nosaltres.</div>
+	<div class='resposta'><h2>Dubtes</h2>Fes-nos una consulta</div>
 </a>
 <a
 	class='card'
@@ -89,7 +89,7 @@ ga('send', 'pageview');
 	href='#diy'
 	>
 	<div class='pregunta'><h2>Fes-t'ho tu</h2>Vols muntar-t'ho tu pel teu compte?</div>
-	<div class='resposta'><h2>Fes-t'ho tu</h2>Pregunta'ns la configuració que has de fer servir.</div>
+	<div class='resposta'><h2>Fes-t'ho tu</h2>Pregunta'ns la configuració que has de fer servir</div>
 </a>
 
 
@@ -102,10 +102,10 @@ ga('send', 'pageview');
 <h2>Demanar una prova de connectivitat</h2>
 <input name='kind' type='hidden' value='connectivitat'>
 <input name='yuemail' type='email' value='' style='display: none'>
-<label>Nom:<input name='nom'></label>
-<label>Cognoms:<input name='cognoms'></label>
+<label>Nom:<input required name='nom'></label>
+<label>Cognoms:<input required name='cognoms'></label>
 <label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
-<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Correu electrònic:<input required name='email' type='email'></label>
 <label>Municipi:<select required name='municipi'>
 	<option selected value=''>Selecciona municipi</option>
 	<optgroup label='Amb xarxa Guifibaix' >
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 	<option value='sjud'>Sant Just Desvern</option>
 	</optgroup>
 	<option value='baix'>Altre municipi del Baix Llobregat</option>
-	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	<option value='other'>Un municipi d'una altra comarca</option>
 	</select>
 </label>
 <label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>
@@ -152,10 +152,10 @@ ga('send', 'pageview');
 <h2>Demanar pressupost per una instaŀlació</h2>
 <input name='kind' type='hidden' value='pressupost'>
 <input name='yuemail' type='email' value='' style='display: none'>
-<label>Nom:<input name='nom'></label>
-<label>Cognoms:<input name='cognoms'></label>
+<label>Nom:<input required name='nom'></label>
+<label>Cognoms:<input required name='cognoms'></label>
 <label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
-<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Correu electrònic:<input required name='email' type='email'></label>
 <label>Municipi:<select required name='municipi'>
 	<option selected value=''>Selecciona municipi</option>
 	<optgroup label='Amb xarxa Guifibaix' >
@@ -182,7 +182,7 @@ ga('send', 'pageview');
 	<option value='sjud'>Sant Just Desvern</option>
 	</optgroup>
 	<option value='baix'>Altre municipi del Baix Llobregat</option>
-	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	<option value='other'>Un municipi d'una altra comarca</option>
 	</select>
 </label>
 <label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>
@@ -202,10 +202,10 @@ ga('send', 'pageview');
 <h2>Fer una consulta o demanar una reunió</h2>
 <input name='kind' type='hidden' value='dubtes'>
 <input name='yuemail' type='email' value='' style='display: none'>
-<label>Nom:<input name='nom'></label>
-<label>Cognoms:<input name='cognoms'></label>
+<label>Nom:<input required name='nom'></label>
+<label>Cognoms:<input required name='cognoms'></label>
 <label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
-<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Correu electrònic:<input required name='email' type='email'></label>
 <label>Municipi:<select required name='municipi'>
 	<option selected value=''>Selecciona municipi</option>
 	<optgroup label='Amb xarxa Guifibaix' >
@@ -232,7 +232,7 @@ ga('send', 'pageview');
 	<option value='sjud'>Sant Just Desvern</option>
 	</optgroup>
 	<option value='baix'>Altre municipi del Baix Llobregat</option>
-	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	<option value='other'>Un municipi d'una altra comarca</option>
 	</select>
 </label>
 <label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>
@@ -252,10 +252,10 @@ ga('send', 'pageview');
 <h2>Demanar configuració per una instaŀlació independent</h2>
 <input name='kind' type='hidden' value='diy'>
 <input name='yuemail' type='email' value='' style='display: none'>
-<label>Nom:<input name='nom'></label>
-<label>Cognoms:<input name='cognoms'></label>
+<label>Nom:<input required name='nom'></label>
+<label>Cognoms:<input required name='cognoms'></label>
 <label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
-<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Correu electrònic:<input required name='email' type='email'></label>
 <label>Municipi:<select required name='municipi'>
 	<option selected value=''>Selecciona municipi</option>
 	<optgroup label='Amb xarxa Guifibaix' >
@@ -282,7 +282,7 @@ ga('send', 'pageview');
 	<option value='sjud'>Sant Just Desvern</option>
 	</optgroup>
 	<option value='baix'>Altre municipi del Baix Llobregat</option>
-	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	<option value='other'>Un municipi d'una altra comarca</option>
 	</select>
 </label>
 <label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>

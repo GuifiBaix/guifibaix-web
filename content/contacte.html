@@ -19,15 +19,16 @@ dades:
       titol: Dubtes
       form: Fer una consulta o demanar una reunió
       pregunta: Vols aclarir dubtes o rebre més informació?
-      resposta: Fes-nos una consulta o demana una reunió amb nosaltres.
+      resposta: Fes-nos una consulta
       imatge: media/images/dubtes.png
 
     - id: diy
       titol: Fes-t'ho tu
       form: Demanar configuració per una instaŀlació independent
       pregunta: Vols muntar-t'ho tu pel teu compte?
-      resposta: Pregunta'ns la configuració que has de fer servir.
+      resposta: Pregunta'ns la configuració que has de fer servir
       imatge: media/images/diy.png
+
 municipis:
   - group: Amb xarxa Guifibaix
     municipis:
@@ -35,9 +36,9 @@ municipis:
       prll: El Prat de Llobregat
       crnll: Cornellà de Llobregat
       edll: Esplugues de Llobregat
-      vldc: Viladecans
       scll: Sant Climent de Llobregat
       scc: Santa Coloma de Cervelló
+      vldc: Viladecans
   - group: En prospecció
     municipis:
       tdll: Torrelles de Llobregat
@@ -73,15 +74,15 @@ municipis:
 	class='contactform'
 	id='{{ item.id }}'
 	>
-<form method='post' action='feedback.php'>
+<form method='post' action='{{resource.meta.feedback.url}}'>
 <a class='close' href='#'>X</a>
 <h2>{{ item.form }}</h2>
 <input name='kind' type='hidden' value='{{ item.id }}'>
 <input name='yuemail' type='email' value='' style='display: none'>
-<label>Nom:<input name='nom'></label>
-<label>Cognoms:<input name='cognoms'></label>
+<label>Nom:<input required name='nom'></label>
+<label>Cognoms:<input required name='cognoms'></label>
 <label>Telèfon de contacte:<input required name='telefon' type='phone'></label>
-<label>Correu electrònic:<input name='email' type='email'></label>
+<label>Correu electrònic:<input required name='email' type='email'></label>
 <label>Municipi:<select required name='municipi'>
 	<option selected value=''>Selecciona municipi</option>
 {% for group in resource.meta.municipis %}
@@ -92,7 +93,7 @@ municipis:
 	</optgroup>
 {% endfor %}
 	<option value='baix'>Altre municipi del Baix Llobregat</option>
-	<option value='other'>Un municipi d'una altra comarca i més enllà de Mordor</option>
+	<option value='other'>Un municipi d'una altra comarca</option>
 	</select>
 </label>
 <label>Adreça:<textarea required rows='2' name='adreca' ></textarea></label>
