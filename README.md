@@ -23,5 +23,7 @@ To publish on http://guifibaix.coop:
 
 	./production.sh
 
+Publishing requires:
 
+	sudo apt-get install git-ftp
 
