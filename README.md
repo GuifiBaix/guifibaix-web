@@ -4,6 +4,9 @@ guifibaix-web
 Official GuifiBaix website
 
 This site uses hyde static page generator.
+Debian package for `hyde` is old, use pip instead, so:
+
+	sudo pip3 install hyde
 
 When working on 'master' branch remember to run:
 
