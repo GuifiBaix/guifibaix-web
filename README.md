@@ -6,7 +6,9 @@ Official GuifiBaix website
 This site uses hyde static page generator.
 Debian package for `hyde` is old, use pip instead, so:
 
-	sudo pip3 install hyde
+	sudo pip install hyde
+
+(Hyde still uses Python2 so `pip3` won't work by now)
 
 When working on 'master' branch remember to run:
 
