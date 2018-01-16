@@ -19,7 +19,7 @@ To view locally in http://localhost:8000
 
 	hyde serve
 
-To publish on github.io use:
+To publish testing preview on http://guifibaix.github.io/guifibaix-web use:
 
 	./publish.sh
 
