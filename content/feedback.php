@@ -93,6 +93,50 @@ if ($filledbyspammers)
 	$subject = "[GuifiBaix Web] SPAM comment received";
 }
 
+$city_names = array(
+	'sjd' => 'Sant Joan Despí',
+	'prll' => 'El Prat de Llobregat',
+	'crnll' => 'Cornellà de Llobregat',
+	'edll' => 'Esplugues de Llobregat',
+	'scll' => 'Sant Climent de Llobregat',
+	'scc' => 'Santa Coloma de Cervelló',
+	'vldc' => 'Viladecans',
+	'tdll' => 'Torrelles de Llobregat',
+	'sbdl' => 'Sant Boi de Llobregat',
+	'sfdl' => 'Sant Feliu de Llobregat',
+	'svdh' => 'Sant Vicenç dels Horts',
+	'sjud' => 'Sant Just Desvern',
+	'kstf' => 'Castelldefels',
+	'mdr' => 'Molins de Rei',
+	'ppl' => 'El Papiol',
+	'gava' => 'Gava',
+	'sadb' => 'Sant Andreu de la Barca',
+	'baix' => 'Un altre municipi del Baix',
+	'other' => 'Un altre fora del Baix',
+);
+
+$city_cp = array(
+	'sjd' => '08970',
+	'prll' => '08820',
+	'crnll' => '08940',
+	'edll' => '08950',
+	'scll' => '08849',
+	'scc' => '08690',
+	'vldc' => '08840',
+	'tdll' => '08629',
+	'sbdl' => '08830',
+	'sfdl' => '08980',
+	'svdh' => '08620',
+	'sjud' => '08960',
+	'kstf' => '08860',
+	'mdr' => '08750',
+	'ppl' => '08036',
+	'gava' => '08850',
+	'sadb' => '08740',
+);
+
+$cp = $city_cp[$municipi] || '??';
+$municipi_name = $city_names[$municipi] || '??';
 
 if ($debug)
 {
@@ -109,7 +153,9 @@ contact:
   email:
   - $email
 address: $adreca
-city: $municipi
+citycode: $municipi
+city: $municipi_name
+cp: $cp
 content: <
 $comentari
 log:
