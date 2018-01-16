@@ -9,6 +9,8 @@ This will create a proper environment named 'web-guifibaix':
 
 	./setupenv.sh
 
+Edits are done in `content/` and the web is generated at `deploy`.
+
 When working on 'master' branch remember to run:
 
 	hyde gen -r
