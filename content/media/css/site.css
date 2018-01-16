@@ -457,6 +457,50 @@ form a:visited.close
 	border-bottom: 2pt solid #883333;
 }
 
+.pmf .back
+{
+	text-align: center;
+	display: block;
+}
+.pmf a.back:link,
+.pmf a.back:active,
+.pmf a.back:visited,
+.pmf a.back:hover
+{
+	background: #aa3333;
+	-webkit-border-radius: .5em;
+	   -moz-border-radius: .5em;
+	        border-radius: .5em;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	   -moz-box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	        box-shadow: 0 2px 4px rgba(0,0,0,.7);
+	padding-top: 1.4ex;
+	padding-bottom: 1.4ex;
+	color: white;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 2px 2px rgba(0,0,0,.7);
+	behavior: url(media/js/libs/PIE.htc);
+}
+.pmf a.back:hover
+{
+	background: #bb4433;
+	text-shadow: 0 4px 4px rgba(1,1,0,.7);
+	-webkit-box-shadow: 0 2px 4px rgba(1,1,0,.7);
+	   -moz-box-shadow: 0 2px 4px rgba(1,1,0,.7);
+	        box-shadow: 0 2px 4px rgba(1,1,0,.7);
+	behavior: url(media/js/libs/PIE.htc);
+}
+.pmf a.back:active
+{
+	background: #aa4433;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	        box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	behavior: url(media/js/libs/PIE.htc);
+}
+
 
 /* Contact page */
 
