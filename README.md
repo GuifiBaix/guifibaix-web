@@ -4,11 +4,10 @@ guifibaix-web
 Official GuifiBaix website
 
 This site uses hyde static page generator.
-Debian package for `hyde` is old, use pip instead, so:
+Debian package for `hyde` is old, use a virtualenv instead.
+This will create a proper environment named 'web-guifibaix':
 
-	sudo pip install hyde
-
-(Hyde still uses Python2 so `pip3` won't work by now)
+	./setupenv.sh
 
 When working on 'master' branch remember to run:
 
