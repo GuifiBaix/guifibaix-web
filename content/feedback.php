@@ -4,6 +4,25 @@ extends: false
 <?php
 
 $debug = 0;
+$debug and ini_set('display_errors', 'On');
+$debug and error_reporting(E_ALL | E_STRICT);
+
+if (!isset($_SERVER)) {
+	exit(header('Location: http://guifibaix.coop/'));
+}
+
+$referrer ="";
+if (!isset($_SERVER['HTTP_REFERER'])) {
+	exit(header('Location: http://guifibaix.coop/'));
+}
+else {
+	$referrer = $_SERVER['HTTP_REFERER'];	
+}
+
+if (!strstr($referrer, '/contacte.html')) {
+	exit(header('Location: http://guifibaix.coop/'));
+}
+
 $from_address = "noreply@guifibaix.coop";
 // split address in two to avoid mail being scanned by robots
 $to_user  = "equipo";
@@ -11,8 +30,7 @@ $to_domain = "guifibaix.coop";
 $to_address = "$to_user@$to_domain";
 $subject = "[GuifiBaix feedback] from ";
 
-$debug and ini_set('display_errors', 'On');
-$debug and error_reporting(E_ALL | E_STRICT);
+
 
 function badRequest($message = "Error 400: Bad Request")
 {
@@ -53,6 +71,7 @@ function post($field, $default=Null)
 }
 
 date_default_timezone_set("UTC");
+$isodate = date("Y-m-d H:i:s");
 $random_hash = md5(rand());
 
 try
@@ -80,12 +99,14 @@ if (! in_array($kind, array(
 		"pressupost",
 		"dubtes",
 		"connectivitat",
+		"show",
 	)))
 {
 	badRequest("Not the proper form");
 }
 
 $subject = "[GuifiBaix Web] $kind: $nom $cognoms";
+$id = $municipi;
 
 if ($filledbyspammers)
 {
@@ -94,49 +115,49 @@ if ($filledbyspammers)
 }
 
 $city_names = array(
-	'sjd' => 'Sant Joan Despí',
-	'prll' => 'El Prat de Llobregat',
-	'crnll' => 'Cornellà de Llobregat',
-	'edll' => 'Esplugues de Llobregat',
-	'scll' => 'Sant Climent de Llobregat',
-	'scc' => 'Santa Coloma de Cervelló',
-	'vldc' => 'Viladecans',
-	'tdll' => 'Torrelles de Llobregat',
-	'sbdl' => 'Sant Boi de Llobregat',
-	'sfdl' => 'Sant Feliu de Llobregat',
-	'svdh' => 'Sant Vicenç dels Horts',
-	'sjud' => 'Sant Just Desvern',
-	'kstf' => 'Castelldefels',
-	'mdr' => 'Molins de Rei',
-	'ppl' => 'El Papiol',
-	'gava' => 'Gava',
-	'sadb' => 'Sant Andreu de la Barca',
-	'baix' => 'Un altre municipi del Baix',
-	'other' => 'Un altre fora del Baix',
+	"sjd" => "Sant Joan Despí",
+	"prll" => "El Prat de Llobregat",
+	"crnll" => "Cornellà de Llobregat",
+	"edll" => "Esplugues de Llobregat",
+	"scll" => "Sant Climent de Llobregat",
+	"scc" => "Santa Coloma de Cervelló",
+	"vldc" => "Viladecans",
+	"tdll" => "Torrelles de Llobregat",
+	"sbdl" => "Sant Boi de Llobregat",
+	"sfdl" => "Sant Feliu de Llobregat",
+	"svdh" => "Sant Vicenç dels Horts",
+	"sjud" => "Sant Just Desvern",
+	"kstf" => "Castelldefels",
+	"mdr" => "Molins de Rei",
+	"ppl" => "El Papiol",
+	"gava" => "Gava",
+	"sadb" => "Sant Andreu de la Barca",
+	"baix" => "Un altre municipi del Baix",
+	"other" => "Un altre fora del Baix",
 );
 
 $city_cp = array(
-	'sjd' => '08970',
-	'prll' => '08820',
-	'crnll' => '08940',
-	'edll' => '08950',
-	'scll' => '08849',
-	'scc' => '08690',
-	'vldc' => '08840',
-	'tdll' => '08629',
-	'sbdl' => '08830',
-	'sfdl' => '08980',
-	'svdh' => '08620',
-	'sjud' => '08960',
-	'kstf' => '08860',
-	'mdr' => '08750',
-	'ppl' => '08036',
-	'gava' => '08850',
-	'sadb' => '08740',
+	"sjd" => "08970",
+	"prll" => "08820",
+	"crnll" => "08940",
+	"edll" => "08950",
+	"scll" => "08849",
+	"scc" => "08690",
+	"vldc" => "08840",
+	"tdll" => "08629",
+	"sbdl" => "08830",
+	"sfdl" => "08980",
+	"svdh" => "08620",
+	"sjud" => "08960",
+	"kstf" => "08860",
+	"mdr" => "08750",
+	"ppl" => "08036",
+	"gava" => "08850",
+	"sadb" => "08740",
 );
 
-$cp = $city_cp[$municipi] || '??';
-$municipi_name = $city_names[$municipi] || '??';
+$cp = $city_cp[$municipi];
+$municipi_name = $city_names[$municipi];
 
 if ($debug)
 {
@@ -173,6 +194,7 @@ $referrer
 Name: $cognoms, $nom <$email>
 Type: $kind
 Telf: $telefon
+Municipi: $municipi_name
 Address:
 $adreca
 Spammer inserted email (666=notspam): $yuemail
@@ -190,8 +212,7 @@ EOF;
 
 if (! $debug )
 {
-
-	$ok = @mail(
+	$ok = mail(
 		$to_address,
 		$subject,
 		$message,
@@ -221,15 +242,8 @@ EOF;
 <html>
 <head> <meta charset="utf-8" /> </head>
 <body>
-<p>We are sorry. There was a problem submiting your comment.
-</p><p>
-Below you have the content of your comment so that you can copy it and submit it later.</p>
-<pre>
-Title: $title
-------------------
-$comment
-------------------
-</pre>
+<p>Perdoneu. Hem tingut un problema enviant el formulari.
+</p>
 <p><a href='$referrer'>Back to the post</a></p>
 </body>
 </html>
