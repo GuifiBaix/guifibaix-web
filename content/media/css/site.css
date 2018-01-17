@@ -600,13 +600,13 @@ form a:visited.close
 .socis .login-box
 {
 	display: inline-block;
-	max-width: 25%;
+	max-width: 28%;
 	min-width: 20em;
 	padding: 1em 2em;
 	margin: 2em 0;
 	text-align: center;
 }
-form.login-box input {
+.socis .login-box input {
 	width: 8em;
 }
 .socis .login-box .login-field
@@ -617,13 +617,14 @@ form.login-box input {
 
 .socis .login-box .login-field label
 {
-	margin: 1em;
+	right-margin: 1em;
 }
 
 .socis .login-box #enter
 {
 	padding: 1ex;
 	margin: 1ex;
+	width: 100%;
 }
 
 .socis .explicacio
