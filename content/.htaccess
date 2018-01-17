@@ -4,12 +4,11 @@ extends: false
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
 
-# Use PHPedge as default
+# Use PHPedge as default: Actual version 7.1
 AddHandler application/x-httpd-php-edge .php
 <IfModule mod_suphp.c>
     suPHP_ConfigPath /opt/phpedge/lib
 </IfModule>
-
 
 deny from 35.157.82.137
 deny from 136.0.0.38
