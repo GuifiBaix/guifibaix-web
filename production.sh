@@ -3,7 +3,7 @@
 # Publishes on http://guifibaix.coop
 
 
-function die() { echo -e '\033[31;1m'"$@"'\033[0m' >&2; exit -1 }
+function die() { echo -e '\033[31;1m'"$@"'\033[0m' >&2; exit -1; }
 
 key=~/.ssh/gbwebdeploy
 
