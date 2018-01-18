@@ -71,7 +71,7 @@ ga('send', 'pageview');
 Para generar lo de abajo:
 $ pip install deansi
 $ cd guifibaix-documents
-$ git diff --color-words --inter-hunk-context=10000  f6b3ace740d1f617441192e83807818de5ac47c6 HEAD -- estatuts/Estatuts.md | deansi.py -s /dev/null | xclip
+$ git diff --color-words --inter-hunk-context=10000  f6b3ace740d1f617441192e83807818de5ac47c6 HEAD -- estatuts/Estatuts.md | deansi.py -s /dev/null | tail -n+20 | xclip
 
 -->
 
@@ -326,24 +326,24 @@ d'acord amb l'article 60 de la Llei de Cooperatives de Catalunya:</p>
 <p>b) Per successió mortis causa. </p>
 <h2>Article 21. Fons socials obligatoris</h2>
 <p>a) Dels excedents comptabilitzats per la determinació del resultat cooperatiu,
-    un cop deduïdes les pèrdues de qualsevol naturalesa d'exercicis anteriors,
-    i abans de la consideració de l'impost sobre societats,
-    s'han de destinar, si escau,
-    al Fons de reserva obligatori i
-    al Fons d'educació i promoció cooperativa
-    els percentatges següents:</p>
-<pre><code>1. Al Fons de reserva obligatori,
-amb la finalitat de contribuir a la consolidació econòmica de la cooperativa,
-s'ha de destinar com a mínim el 30% dels excedents &lt;span class='ansi_red'&gt;nets (34).&lt;/span&gt;&lt;span class='ansi_green'&gt;nets.&lt;/span&gt;
-
-2. Al Fons d'educació i promoció cooperativa cal destinar
-com a mínim el 10% dels excedents nets de cada exercici&lt;span class='ansi_red'&gt;(34)&lt;/span&gt;
-i ha de tenir com a finalitats:
-la formació dels socis i dels treballadors en els principis i les tècniques cooperatives, empresarials, econòmiques i professionals;
-la promoció de les relacions entre cooperatives i la difusió del cooperativisme,&lt;span class='ansi_red'&gt;i&lt;/span&gt;
-l'atenció a objectius d'incidència social i de lluita contra l'exclusió &lt;span class='ansi_red'&gt;social (35).&lt;/span&gt;&lt;span class='ansi_green'&gt;social,&lt;/span&gt;
-</code></pre>
-<p><span class='ansi_green'>   i el pagament de les quotes de les federacions a les que s'afilïi la cooperativa.</span></p>
+un cop deduïdes les pèrdues de qualsevol naturalesa d'exercicis anteriors,
+i abans de la consideració de l'impost sobre societats,
+s'han de destinar, si escau,
+al Fons de reserva obligatori i
+al Fons d'educació i promoció cooperativa
+els percentatges següents:</p>
+<p>1.
+    Al Fons de reserva obligatori,
+    amb la finalitat de contribuir a la consolidació econòmica de la cooperativa,
+    s'ha de destinar com a mínim el 30% dels excedents <span class='ansi_red'>nets (34).</span><span class='ansi_green'>nets.</span></p>
+<p>2.
+    Al Fons d'educació i promoció cooperativa cal destinar
+    com a mínim el 10% dels excedents nets de cada exercici<span class='ansi_red'>(34)</span>
+    i ha de tenir com a finalitats:
+    la formació dels socis i dels treballadors en els principis i les tècniques cooperatives, empresarials, econòmiques i professionals;
+    la promoció de les relacions entre cooperatives i la difusió del cooperativisme,<span class='ansi_red'>i</span>
+    l'atenció a objectius d'incidència social i de lluita contra l'exclusió <span class='ansi_red'>social (35).</span><span class='ansi_green'>social,</span>
+    <span class='ansi_green'>   i el pagament de les quotes de les federacions a les que s'afilïi la cooperativa.</span></p>
 <p>b) Dels beneficis extracooperatius,
     una vegada deduïdes les pèrdues de qualsevol naturalesa d'exercicis anteriors
     i abans de l'impost sobre societats,
