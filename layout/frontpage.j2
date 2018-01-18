@@ -55,10 +55,9 @@ ga('send', 'pageview');
 </header>
 <div class='topmenu'>
 <ul>
-<li><a href="index.html">Inici</a></li>
-<li><a href="pmf.html">Informació</a></li>
-<li><a href="contacte.html">Contacte</a></li>
-<li><a href="socis.html">Socis</a></li>
+{% for item in menu %}
+<li><a href="{{item.url}}">{{item.label}}</a></li>
+{% endfor %}
 </ul>
 </div>
 
