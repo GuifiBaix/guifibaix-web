@@ -10,8 +10,7 @@ AddHandler application/x-httpd-php-edge .php
     suPHP_ConfigPath /opt/phpedge/lib
 </IfModule>
 
-RewriteEngine on
-RewriteRule \.sh$ - [R=404]
+RedirectMatch 404 \.(sh|htacces)$
 
 deny from 35.157.82.137
 deny from 136.0.0.38
