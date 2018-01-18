@@ -1,0 +1,10 @@
+---
+extends: false
+---
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /classes/
+Disallow: /media/
+Disallow: .htaccess
+Sitemap: http://guifibaix.coop/sitemap.xml
