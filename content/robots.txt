@@ -7,4 +7,4 @@ Disallow: /cgi-bin/
 Disallow: /classes/
 Disallow: /media/
 Disallow: .htaccess
-Sitemap: http://guifibaix.coop/sitemap.xml
+Sitemap: https://guifibaix.coop/sitemap.xml

@@ -8,8 +8,8 @@ require.config({
 	baseUrl: 'media/js/libs/',
 	paths: {
 		jquery: isOldIE() ? 
-			'http://code.jquery.com/jquery-1.10.2.min':
-			'http://code.jquery.com/jquery-2.0.3.min',
+			'//code.jquery.com/jquery-1.10.2.min':
+			'//code.jquery.com/jquery-2.0.3.min',
 //		fancybox: 'http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
 		fancybox: 'jquery.fancybox-2.1.5',
 	},
