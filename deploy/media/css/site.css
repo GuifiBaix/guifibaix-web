@@ -242,7 +242,8 @@ form a:visited.close
 	margin: 1ex;
 	margin-right: 1%;
 	margin-left: 1%;
-	width: 21%; /* 100%/4 - 4*2% */
+	/*width: 21%; /* 100%/4 - 4*2% */
+	width: 28.5%; /* 100%/3 - 3*2% */
 	min-width: 8em;
 }
 .topmenu a:link,
