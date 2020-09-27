@@ -12,7 +12,7 @@ This will create a proper environment named 'web-guifibaix':
 Edits are done in `content/` and the web is generated at `deploy`.
 `layout` contains the templates to wrap the content.
 
-To view the web locally in http://localhost:8000
+To view the web locally in http://localhost:8080
 
 	hyde serve
 
